@@ -1,0 +1,66 @@
+/*Seccion grilla*/
+
+.contenedor{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4);
+    grid-template-rows: repeat(8);
+    grid-template-areas: "menu menu menu menu"
+    "header header header header"
+    "sect1 sect1 sect1 sect1"
+    "sect2 sect2 sect2 sect2"
+    "sect3 sect3 sect3 sect3"
+    "sect4 sect4 sect4 sect4"
+    "sect5 sect5 sect5 sect5"
+    "footer footer footer footer ";
+}
+
+.contenedor nav{
+    background-color: gray;
+    grid-area: menu;
+    width: 100%;
+    height: 80px;
+}
+
+.contenedor header{
+    background-color: black;
+    grid-area: header;
+    width: 100%;
+    height: 500px;
+}
+
+.contenedor .clasica{
+    grid-area: sect1;
+    width: 100%;
+    height: 400px;
+}
+
+.contenedor .moderna{
+    grid-area: sect2;
+    width: 100%;
+    height: 400px;
+}
+
+.contenedor .unica{
+    grid-area: sect3;
+    width: 100%;
+    height: 400px;
+}
+
+.contenedor .icon{
+    grid-area: sect4;
+    width: 100%;
+    height: 300px;
+}
+
+.contenedor .redes{
+    grid-area: sect5;
+    width: 100%;
+    height: 200px;
+}
+
+.contenedor footer{
+    grid-area: footer;
+    width: 100%;
+    height: 100px;
+}
