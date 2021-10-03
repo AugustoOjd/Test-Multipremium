@@ -1,5 +1,18 @@
-let saludo = prompt("Hola como te llamas?");
 
-let respuesta = (saludo + " " + "como estas?");
+let edad = prompt("Cuantos años tienes?")
+let nombre= prompt("Como te llamas?")
 
-alert(respuesta);
+if(edad >= 18){
+    alert(`${nombre} eres mayor de edad, puedes ingresar`)
+}
+
+else if((edad == "") || (nombre == "")){
+    alert("Te faltaron datos")
+}
+
+else{
+    alert(`${nombre} eres menor de edad, no puedes ingresar. Cuidate`)
+}
+
+
+
