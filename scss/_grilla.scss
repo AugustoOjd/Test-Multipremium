@@ -26,11 +26,11 @@
     background-color: black;
     grid-area: header;
     width: 100%;
-    height: 500px;
+    height: 400px;
 }
 
 .contenedor .clasica{
-    grid-area: sect1;
+    grid-area: sect3;
     width: 100%;
     height: 400px;
 }
@@ -42,9 +42,9 @@
 }
 
 .contenedor .unica{
-    grid-area: sect3;
+    grid-area: sect1;
     width: 100%;
-    height: 400px;
+    height: 700px;
 }
 
 .contenedor .icon{

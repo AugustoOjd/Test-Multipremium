@@ -5,7 +5,22 @@
 
 .descripcion p{
     display: flex;
-    
+
     color: white;
     font-family: 'Cinzel', serif;
+}
+
+.tituloPremium{
+    font-size: 80px;
+    font-style: oblique;
+    
+}
+
+.textoPremium{
+    font-size: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    
+    height: 300px;
+    width: 50px;
 }
