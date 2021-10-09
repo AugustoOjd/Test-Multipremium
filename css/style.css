@@ -11,57 +11,64 @@
   display: grid;
   grid-template-columns: repeat(4);
   grid-template-rows: repeat(8);
-  grid-template-areas: "menu menu menu menu" "header header header header" "sect1 sect1 sect1 sect1" "sect2 sect2 sect2 sect2" "sect3 sect3 sect3 sect3" "sect4 sect4 sect4 sect4" "sect5 sect5 sect5 sect5" "footer footer footer footer ";
+  grid-template-areas: "menu menu menu menu"
+ "header header header header"
+ "sect1 sect1 sect1 sect1"
+ "sect2 sect2 sect2 sect2"
+ "sect3 sect3 sect3 sect3"
+ "sect4 sect4 sect4 sect4"
+ "sect5 sect5 sect5 sect5"
+ "footer footer footer footer ";
 }
 
 .contenedor .menu {
   background-color: gray;
   grid-area: menu;
   width: 100%;
-  height: 80px;
+  height: 100px;
 }
 
 .contenedor header {
   background-color: black;
   grid-area: header;
   width: 100%;
-  height: 400px;
+  height: 600px;
 }
 
 .contenedor .clasica {
   grid-area: sect3;
   width: 100%;
-  height: 400px;
+  height: 1100px;
 }
 
 .contenedor .moderna {
   grid-area: sect2;
   width: 100%;
-  height: 400px;
+  height: 700px;
 }
 
 .contenedor .unica {
   grid-area: sect1;
   width: 100%;
-  height: 700px;
+  height: 800px;
 }
 
 .contenedor .icon {
   grid-area: sect4;
   width: 100%;
-  height: 300px;
+  height: 500px;
 }
 
 .contenedor .redes {
   grid-area: sect5;
   width: 100%;
-  height: 200px;
+  height: 400px;
 }
 
 .contenedor footer {
   grid-area: footer;
   width: 100%;
-  height: 100px;
+  height: 200px;
 }
 
 .menu {
@@ -71,9 +78,16 @@
 }
 
 .tamañoMenu {
+  font-size: 35px;
   width: 100%;
   height: 100%;
 }
+
+.logoMenu{
+  font-size: 100px;
+}
+
+/*Seccion header menu principal*/
 
 .descripcion h1 {
   color: white;
@@ -87,28 +101,86 @@
 }
 
 .tituloPremium {
-  font-size: 80px;
+  font-size: 100px;
   font-style: oblique;
 }
 
 .textoPremium {
-  font-size: 20px;
+  font-size: 35px;
   display: flex;
   flex-wrap: wrap;
   height: 300px;
   width: 50px;
 }
 
-.tituloEdicionLimitada {
-  margin-bottom: 100px;
+/*Seccion edicion limiada*/
+
+.unica__img{
+  background-image: url(../assest/edicion-limitada.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 768px;
+  height: 800px;
 }
 
-.logoEdicionLimitada {
-  width: 100%;
-  height: 200px;
+.unica__img2{
+  display: flex;
+  width: 450px;
+  height: 300px;
+
+  position: relative;
+  left: 300px;
+  bottom: 250px;
 }
 
-.imgCarousel {
-  height: 500px;
-  width: 100%;
+.unica__titulo{
+  font-size: 70px;
+  display: flex;
+  justify-content: right;
+  padding: 15px;
+  
+}
+
+.unica__texto{
+  font-size: 50px;
+  text-align: end;
+  display: flex;
+  justify-content: end;
+  
+  width: 400px;
+  height: 600px;
+  margin-left: 300px;
+  
+}
+
+
+/*Seccion moderna pagina principal*/
+
+.moderna{
+  background-color: rgb(195, 238, 255);
+}
+
+.contenedorCarousel{
+  padding: 5px;
+}
+
+.img__carousel{
+  width: 100px;
+  height: 640px;
+}
+
+.button__moderna{
+  margin-top: 5px;
+}
+
+/*Seccion ropa clasica*/
+
+.clasica__img{
+  background-image: url(../assest/clasica-imgen-fondo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
+  height: 1100px;
+  
 }
