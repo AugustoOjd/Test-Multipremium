@@ -51,7 +51,7 @@
 // camisas();
 
 
-/*---------------Desafio de la clase numero 5---------------*/
+/*-------------------------                   Desafio de la clase numero 5                                     ----------------------*/
 
 // class ropaModerna{
 //     constructor(nombre, talle, color, precio){
