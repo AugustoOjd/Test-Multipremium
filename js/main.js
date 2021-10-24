@@ -53,65 +53,65 @@
 
 /*---------------Desafio de la clase numero 5---------------*/
 
-class ropaModerna{
-    constructor(nombre, talle, color, precio){
-        this.nombre = nombre.toUpperCase();
-        this.talle = talle;
-        this.color = color;
-        this.precio = parseFloat(precio);
-        this.vendido = false;
-    }
+// class ropaModerna{
+//     constructor(nombre, talle, color, precio){
+//         this.nombre = nombre.toUpperCase();
+//         this.talle = talle;
+//         this.color = color;
+//         this.precio = parseFloat(precio);
+//         this.vendido = false;
+//     }
 
-    sumarIva(){
-        this.precio = this.precio * 1.21;
-    }
-}
-
-
-class remera extends ropaModerna{
-    constructor(nombre, talle, color, precio, modelo){
-        super(nombre, talle, color, precio);
-        this.modelo = modelo;
-    }
+//     sumarIva(){
+//         this.precio = this.precio * 1.21;
+//     }
+// }
 
 
-}
+// class remera extends ropaModerna{
+//     constructor(nombre, talle, color, precio, modelo){
+//         super(nombre, talle, color, precio);
+//         this.modelo = modelo;
+//     }
 
-class pantalon extends ropaModerna{
-    constructor(nombre, talle, color, precio, modelo){
-        super(nombre, talle, color, precio);
-        this.modelo = modelo;
 
-    }
+// }
 
-    Stock(){
-        console.log(`No hay stock de ${this.nombre} modelo: ${this.modelo}`)
-    }
+// class pantalon extends ropaModerna{
+//     constructor(nombre, talle, color, precio, modelo){
+//         super(nombre, talle, color, precio);
+//         this.modelo = modelo;
+
+//     }
+
+//     Stock(){
+//         console.log(`No hay stock de ${this.nombre} modelo: ${this.modelo}`)
+//     }
     
-}
+// }
 
-const remera1 = new remera("remera manga larga", "M", "Azul", "700", "Corte Coreano")
+// const remera1 = new remera("remera manga larga", "M", "Azul", "700", "Corte Coreano")
 
-const pantalon1 = new pantalon("pantalon corto", "42", "Verde", "650", "Playero")
+// const pantalon1 = new pantalon("pantalon corto", "42", "Verde", "650", "Playero")
 
-remera1.sumarIva();
-pantalon1.Stock();
+// remera1.sumarIva();
+// pantalon1.Stock();
 
 
-let comprarRemera = confirm(`Desea comprar ${remera1.nombre} talle: ${remera1.talle} Color: ${remera1.color} Modelo: ${remera1.modelo}`)
+// let comprarRemera = confirm(`Desea comprar ${remera1.nombre} talle: ${remera1.talle} Color: ${remera1.color} Modelo: ${remera1.modelo}`)
 
-if(comprarRemera == true){
-    alert(`Compraste ${remera1.nombre} a ${remera1.precio} pesos`)
-}
-else{ 
-    alert("No compraste nada, tenemos otros productos")
-}
+// if(comprarRemera == true){
+//     alert(`Compraste ${remera1.nombre} a ${remera1.precio} pesos`)
+// }
+// else{ 
+//     alert("No compraste nada, tenemos otros productos")
+// }
 
-let comprarPantalon = confirm(`Desea comprar ${pantalon1.nombre} talle: ${pantalon1.talle} Color: ${pantalon1.color} Modelo: ${pantalon1.modelo}`)
+// let comprarPantalon = confirm(`Desea comprar ${pantalon1.nombre} talle: ${pantalon1.talle} Color: ${pantalon1.color} Modelo: ${pantalon1.modelo}`)
 
-if(comprarPantalon == true){
-    alert("Perdon, no hay stock disponible")
-}else{
-    alert("Adios, vuelve pronto")
-}
+// if(comprarPantalon == true){
+//     alert("Perdon, no hay stock disponible")
+// }else{
+//     alert("Adios, vuelve pronto")
+// }
 

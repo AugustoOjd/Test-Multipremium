@@ -114,7 +114,7 @@ body{
 .carrito{
   position: fixed;
   left: 350px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.5);
   margin: 10px;
   border-radius: 15px;
 }
@@ -283,4 +283,157 @@ footer div{
   padding: 40px;
   background-color: white;
   height: 80%;
+}
+
+/*---------------SECCION EDICION LIMITADA------------*/
+
+.contenedor__edicionlimitada1{
+  padding: 10px;
+}
+
+.remeraEL1{
+  background-color: white;
+  border-radius: 20px;
+  border: solid rgb(46, 130, 255);
+  display: flex;
+  flex-flow: wrap;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.remeraEL1 img{
+  border-radius: 20px;
+  display: flex;
+  width: 190px;
+
+}
+
+.remeraEL1__texto{
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-flow: column;
+  width: 250px;
+
+  padding: 15px;
+
+  margin-left: 130px;
+  margin-top: -160px;
+  height: 140px;
+}
+
+.remeraEL1__texto h3{
+  font-size: 20px;
+}
+
+/*Remera 2*/
+
+.remeraEL2{
+  background-color: white;
+  border-radius:20px;
+  border: solid rgb(46,130, 255);
+  display: flex;
+  flex-flow: wrap;
+  margin-top: 20px;
+}
+
+.remeraEL2 img{
+  border-radius: 20px;
+  display: flex;
+  width: 190px;
+  
+
+}
+
+.remeraEL2__texto{
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-flow: column;
+  width: 250px;
+
+  padding: 15px;
+
+  margin-left: 130px;
+  margin-top: -160px;
+  height: 140px;
+}
+
+.remeraEL2__texto h3{
+  font-size: 20px;
+}
+
+/*pantalon1*/
+
+.contenedor__edicionlimitada2{
+  padding: 10px;
+}
+
+.pantalonEL1{
+  background-color: white;
+  border-radius:10px;
+  border: solid rgb(46,130, 155);
+  display: flex;
+  flex-flow: wrap;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.pantalonEL1 img{
+  border-radius: 20px;
+  display: flex;
+  width: 190px;
+  height: 190px;
+
+}
+
+.pantalonEL1__texto{
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-flow: column;
+  width: 250px;
+
+  padding: 15px;
+
+  margin-left: 130px;
+  margin-top: -160px;
+  height: 140px;
+}
+
+/*pantalon2*/
+
+.pantalonEL2{
+  background-color: white;
+  border-radius:20px;
+  border: solid rgb(46,130, 255);
+  display: flex;
+  flex-flow: wrap;
+  margin-top: 20px;
+}
+
+.pantalonEL2 img{
+  border-radius: 20px;
+  display: flex;
+  width: 190px;
+  
+
+}
+
+.pantalonEL2__texto{
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-flow: column;
+  width: 250px;
+
+  padding: 15px;
+
+  margin-left: 130px;
+  margin-top: -160px;
+  height: 140px;
 }
