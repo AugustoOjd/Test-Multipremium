@@ -9,7 +9,7 @@ body{
   background-color: black;
 }
 
-/*Seccion grilla*/
+/*---------------------Seccion grilla---------------------------------*/
 .contenedor {
   width: 100%;
   display: grid;
@@ -70,7 +70,7 @@ body{
 .contenedor .icon {
   grid-area: sect4;
   width: 100%;
-  height: 1100px;
+  height: 1000px;
   padding: 5px;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -92,7 +92,7 @@ body{
   height: 100px;
 }
 
-/*Seccion de Menu*/
+/*----------------------------Seccion de Menu-------------------*/
 .menu {
   display: flex;
   justify-content: space-around;
@@ -109,7 +109,7 @@ body{
   font-size: 100px;
 }
 
-/*Carrito flotante*/
+/*------------------------Carrito flotante------------------------------*/
 
 .carrito{
   position: fixed;
@@ -121,7 +121,7 @@ body{
 
 
 
-/*Seccion header principal*/
+/*----------------------------Seccion header principal---------------------------*/
 
 .descripcion h1 {
   color: white;
@@ -147,7 +147,7 @@ body{
   width: 50px;
 }
 
-/*Seccion edicion limiada*/
+/*------------------------Seccion edicion limiada pagina principal------------------------*/
 
 .unica__img{
   background-image: url(../assest/edicion-limitada.jpg);
@@ -157,22 +157,17 @@ body{
   height: 700px;
 }
 
-.unica__img2{
-  display: inline-flex;
-  width: 300px;
-  height: 250px;
-
-  position: relative;
-  left: 90px;
-  top: 50px;
-  
-}
-
 .unica__titulo{
-  font-size: 50px;
+  font-size: 40px;
+  font-weight: 700;
   display: flex;
   justify-content: end;
+  margin-left: 20px;
+  margin-right: 20px;
   padding: 15px;
+  text-shadow: 4px 4px rgb(255, 255, 255);
+
+  border-bottom: solid 5px rgb(255, 255, 255);
   
 }
 
@@ -182,6 +177,7 @@ body{
   flex-wrap: wrap;
   justify-content: flex-end;
   flex-wrap: wrap;
+  text-shadow: 3px 3px rgb(255, 255, 255);
   
   text-align: end;
   padding-left: 100px;
@@ -189,20 +185,58 @@ body{
   
 }
 
+.unica__carousel{
+  border: solid 8px rgb(46, 130, 255);
+  border-radius: 20px;
+  position: relative;
+  top: 60px;
+  left: 80px;
+  width: 80%;
+  height: 200px;
+}
 
-/*Seccion moderna pagina principal*/
+.unica__carousel img{
+  border-radius: 10px;
+  width: 200px;
+  height: 185px;
+}
 
+/*-----------Seccion moderna pagina principal------------*/
+
+.tituloModerna{
+  background-color: white;
+  border-radius: 40px;
+  border: solid 3px rgb(46, 130, 255);
+  height: 70px;
+}
+
+.tituloModerna h2{
+  font-style: italic;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.contenedorCarousel{
+  width: 100%;
+  height: 470px;
+
+  padding: 10px;
+}
 
 .img__carousel{
   width: 100px;
-  height: 540px;
+  height: 470px;
+
 }
 
 .button__moderna{
   margin-top: 5px;
 }
 
-/*Seccion ropa clasica*/
+/*---------Seccion ropa clasica pagina principal-------------*/
 
 
 
@@ -215,32 +249,70 @@ body{
   
 }
 
-/*Seccion iconos*/
+.cont__clasica--text h2{
+  font-family: sans-serif;
+  font-weight: 600;
+  text-shadow: 4px 4px black;
+  
+  font-size: 80px;
+  border-bottom: solid 7px black;
+}
+
+.cont__clasica--text p{
+  font-size: 50px;
+  font-weight: 600;
+  text-align: end;
+  text-shadow: 2px 2px black;
+
+  margin-top: 50px;
+}
+
+.cont_clasica--boton{
+  display: flex;
+  justify-content: end;
+}
+
+
+
+/*---------------Seccion iconos-------------*/
 
 .cuotas img{
   width: 100%;
-  height: 400px;
+  height: 380px;
 }
 
 .cuotas p{
   font-size: 40px;
-  color: white;
+  font-weight: 500;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: white;
+  border-radius: 30px;
+  
+  border: solid 3px rgb(46, 130, 255);
+  color: rgb(0, 0, 0);
+  
   text-align: center;
 }
 
 .envios img{
   width: 100%;
-  height: 400px;
+  height: 380px;
 }
 
 .envios p{
   font-size: 40px;
-  color: white;
+  font-weight: 500;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: rgb(0, 0, 0);
+  background-color: white;
+  border-radius: 30px;
+  
+  border: solid 3px rgb(46, 130, 255);
 
   text-align: center;
 }
 
-/*Seccion Redes*/
+/*---------Seccion Redes--------------*/
 
 .redes{
   display: flex;
@@ -248,22 +320,84 @@ body{
   width: 100%;
 }
 
-.redes img{
+.cont__insta{
   width: 80px;
   height: 80px;
+  background-color: white ;
+  border: solid 3px rgb(46,130, 255);
+  box-shadow: 5px -3px blue;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/*Seccion footer*/
+.cont__insta:hover{
+  transform: translate(10px, -5px);
+  transition: 2s;
+}
+
+.cont__what{
+  width: 80px;
+  height: 80px;
+  background-color: white ;
+  border: solid 3px rgb(46,130, 255);
+  box-shadow: 5px -3px blue;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cont__what:hover{
+  transform: translate(10px, -5px);
+  transition: 2s;
+}
+
+.cont__face{
+  width: 80px;
+  height: 80px;
+  background-color: white ;
+  border: solid 3px rgb(46,130, 255);
+  box-shadow: 5px -3px blue;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cont__face:hover{
+  transform: translate(10px, -5px);
+  transition: 2s;
+}
+
+
+.redes img{
+
+  width: 60px;
+  height: 60px;
+}
+
+/*------------Seccion footer------------*/
 
 footer{
-  background-color: rgb(109, 109, 109);
+  background-color: rgb(255, 255, 255);
+  border: solid 5px rgb(46,130, 255);
+  border-radius: 30px;
 }
 
 footer div{
   font-size: 25px;
+  text-decoration: none;
   display: flex;
   justify-content: space-around;
-  padding: 30px;
+  margin-top: 25px;
+
+}
+
+footer div a{
+  font-weight: 700;
+  text-decoration: none;
   
 }
 
@@ -374,7 +508,7 @@ footer div{
 .pantalonEL1{
   background-color: white;
   border-radius:10px;
-  border: solid rgb(46,130, 155);
+  border: solid rgb(46,130, 255);
   display: flex;
   flex-flow: wrap;
   margin-top: 10px;
