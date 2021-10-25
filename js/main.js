@@ -144,7 +144,7 @@ edicionLimitada.sort(function (a, b) {
 
 console.log(edicionLimitada)
 
-/*-----------------                   Desafio primera intrega de proyecto                         -----------*/
+/*-----------------                   Desafio primera entrega de proyecto                         -----------*/
 
 console.log("Primera entrega de proyecto esta usando prompt y alerts")
 
