@@ -138,6 +138,12 @@ console.log(barato);
 const campera = edicionLimitada.find(producto => producto.id === 2);
 console.log(campera);
 
+edicionLimitada.sort(function (a, b) {
+    return(a.precio - b.precio);
+});
+
+console.log(edicionLimitada)
+
 /*-----------------                   Desafio primera intrega de proyecto                         -----------*/
 
 console.log("Primera entrega de proyecto esta usando prompt y alerts")
