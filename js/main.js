@@ -53,6 +53,8 @@
 
 /*-------------------------                   Desafio de la clase numero 5                                     ----------------------*/
 
+//Console.log("Desafio clase 5")
+
 // class ropaModerna{
 //     constructor(nombre, talle, color, precio){
 //         this.nombre = nombre.toUpperCase();
@@ -115,3 +117,77 @@
 //     alert("Adios, vuelve pronto")
 // }
 
+
+
+
+/*---------------------------------         DESAFIO CLASE 6 ARRAYS                  -----------------------------*/
+
+/*---------Desafio crear un array y desafio complementario usar propiedades en el array esta en console.log-----------*/
+
+console.log("Desafio y desafio complementario clase 6")
+
+const edicionLimitada = [{id:1, producto: "remera1", precio: 800},
+                        {id:2, producto: "campera1", precio: 1800},
+                        {id:3, producto: "remera2", precio: 900},
+                        {id:4, producto: "pantalon1", precio: 1400},
+                        {id:5, producto: "pantalon corto1", precio: 1200}]
+
+const barato = edicionLimitada.filter(producto => producto.precio <1000);
+console.log(barato);
+
+const campera = edicionLimitada.find(producto => producto.id === 2);
+console.log(campera);
+
+/*-----------------                   Desafio primera intrega de proyecto                         -----------*/
+
+console.log("Primera entrega de proyecto esta usando prompt y alerts")
+
+class ropaClasica{
+    constructor(nombre, precio, modelo){
+        this.nombre = nombre.toUpperCase();
+        this.precio = parseFloat(precio);
+        this.modelo = modelo;
+    }
+
+    sumarIva(){
+        this.precio = this.precio * 1.21;
+    }
+
+    dividirCuotas(){
+        this.precio = this.precio/12;
+    }
+}
+
+const productoClasica = [];
+
+productoClasica.push(new ropaClasica("Camisa manga larga", "1500","Corte europeo"));
+productoClasica.push(new ropaClasica("Pantalon cuero", "2000", "Latino"));
+productoClasica.push(new ropaClasica("Vestido Venecia", "1000", "Modelo italiano"));
+
+for (const iva of productoClasica){
+    iva.sumarIva();
+    iva.dividirCuotas();
+
+}
+
+
+console.log(productoClasica)
+
+
+
+alert("Ingresaste a ropa Clasica, actualmente tenemos 3 modelos para ofercerte")
+
+//alert(`Tenemos disponible ${productoClasica[0].nombre} a ${productoClasica[0].precio}`)
+
+
+let dinero = prompt("Cuanto dinero deseas gastar?")
+
+if(dinero >= 2000 ){
+    alert(`Tenemos disponible ${productoClasica[1].nombre} en 12 cuotas de ${productoClasica[1].precio}`)
+}else if(dinero >= 1500){
+    alert(`Tenemos disponible ${productoClasica[0].nombre} en 12 cuotas de ${productoClasica[0].precio}`)
+}else if(dinero >= 1000){
+    alert(`Tenemos disponible ${productoClasica[2].nombre} en 12 cuotas de ${productoClasica[2].precio}`)
+}else{
+    alert("Disculpe, no tenemos productos de ese precio disponible")
+}
