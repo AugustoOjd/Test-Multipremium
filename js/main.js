@@ -210,8 +210,7 @@ const contraseña2 = document.getElementById("password2")
 const form = document.getElementById("form")
 const parrafo = document.getElementById("warnings")
 const error = document.getElementById("error")
-const emailIngreso = document.getElementById("emailIngreso")
-const passwordIngreso = document.getElementById("passwordIngreso")
+
 
 form.addEventListener("submit", e=>{
     let mensaje =[]
@@ -227,21 +226,99 @@ form.addEventListener("submit", e=>{
         mensaje.push ("Email invalido")
     }
     if(contraseña.value.length < 6){
-        mensaje.push ("La constraseña es muy corta")
+        mensaje.push ("La constraseña invalida")
 
     }
     if(contraseña.value.length >= 8){
         mensaje.push ("La constraseña es muy larga")
 
     }
-    if(contraseña !== contraseña2){
+    if(contraseña.value.length != contraseña2.value.length){
         mensaje.push("Las contraseñas no son iguales")
     }
     if(mensaje.length > 0){
         e.preventDefault()
         error.innerText = mensaje.join (`
         `)
+    }else{
+        alert("Usuario creado correctamente")
     }
     
     
+});
+
+// const emailL = document.getElementById("emailL")
+// const contraseñaL = document.getElementById("passwordL")
+// const formL = document.getElementById("formL")
+// const errorL = document.getElementById("errorL")
+
+// formL.addEventListener("click", i=>{
+//     let mensaje =[]
+//     let regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
+
+//     if(!regexEmail.test(email.value)){
+//         mensaje.push ("Email invalido")
+//     }
+//     if(contraseñaL.value.length < 6 || contraseñaL == ""){
+//         mensaje.push ("La constraseña incorrecta")
+
+//     }
+//     if(contraseñaL.value.length >= 8){
+//         mensaje.push ("La constraseña es muy larga")
+
+//     }
+//     if(mensaje.length > 0){
+//         i.preventDefault()
+//         error.innerText = mensaje.join (`
+//         `)
+//     }
+
+// })
+
+
+
+/*----------------------------- SECCION ROPA EDICION MODERNA --------------------------------------*/
+
+
+// class carrito {
+
+//     comprarProducto(e){
+//         e.preventDefault();
+//     }
+// }
+
+// class productos{
+//     constructor(nombre, talle, color, precio){
+//         this.nombre = nombre;
+//         this.talle = talle;
+//         this.color = color;
+//         this.precio = parseFloat(precio);
+//     }
+    
+//     sumarIva(){
+//         this.precio = this.precio*1.21
+//     }
+// }
+
+const productos =[
+    {id: 1, nombre: "", talle: "", color: ""},
+    {id: 2, nombre: "", talle: "", color: ""},
+    {id: 3, nombre: "", talle: "", color: ""},
+    {id: 4, nombre: "", talle: "", color: ""},
+]
+const carrito=[]
+
+const ropaModerna = document.getElementById("catalogoModerna")
+const agregarCarrito = document.getElementsByClassName("agregar-carrito")
+
+ropaModerna.addEventListener("submit", e=>{
+    e.defaultPrevented();
+    if(e.target.classList.contains("agregar-carrito")){
+        productos.forEach(producto => {
+            
+        });
+    }
 })
+
+
+
