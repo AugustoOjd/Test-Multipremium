@@ -247,78 +247,91 @@ form.addEventListener("submit", e=>{
     
 });
 
-// const emailL = document.getElementById("emailL")
-// const contraseñaL = document.getElementById("passwordL")
-// const formL = document.getElementById("formL")
-// const errorL = document.getElementById("errorL")
-
-// formL.addEventListener("click", i=>{
-//     let mensaje =[]
-//     let regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
-
-//     if(!regexEmail.test(email.value)){
-//         mensaje.push ("Email invalido")
-//     }
-//     if(contraseñaL.value.length < 6 || contraseñaL == ""){
-//         mensaje.push ("La constraseña incorrecta")
-
-//     }
-//     if(contraseñaL.value.length >= 8){
-//         mensaje.push ("La constraseña es muy larga")
-
-//     }
-//     if(mensaje.length > 0){
-//         i.preventDefault()
-//         error.innerText = mensaje.join (`
-//         `)
-//     }
-
-// })
 
 
 
 /*----------------------------- SECCION ROPA EDICION MODERNA --------------------------------------*/
 
 
-// class carrito {
 
-//     comprarProducto(e){
-//         e.preventDefault();
-//     }
-// }
+//Array productos
 
-// class productos{
-//     constructor(nombre, talle, color, precio){
-//         this.nombre = nombre;
-//         this.talle = talle;
-//         this.color = color;
-//         this.precio = parseFloat(precio);
-//     }
-    
-//     sumarIva(){
-//         this.precio = this.precio*1.21
-//     }
-// }
+const productos=[
+    {
+        id: 0,
+        nombre: "Remera mujer verano",
+        precio: 800,
+        imgSrc: "../assest/remera1-edicionlimitada.jpg"
+    },
+    {
+        id: 1,
+        nombre: "Remera hombre verano",
+        precio: 1000,
+        imgSrc: "../assest/remera2-edicionlimitada.jpg"
+    },
+    {
+        id: 2,
+        nombre: "Remera casual verano",
+        precio: 900,
+        imgSrc: "../assest/remera3-moderno.png"
+    }
 
-const productos =[
-    {id: 1, nombre: "", talle: "", color: ""},
-    {id: 2, nombre: "", talle: "", color: ""},
-    {id: 3, nombre: "", talle: "", color: ""},
-    {id: 4, nombre: "", talle: "", color: ""},
 ]
-const carrito=[]
 
 const ropaModerna = document.getElementById("catalogoModerna")
-const agregarCarrito = document.getElementsByClassName("agregar-carrito")
 
-ropaModerna.addEventListener("submit", e=>{
-    e.defaultPrevented();
-    if(e.target.classList.contains("agregar-carrito")){
-        productos.forEach(producto => {
-            
-        });
-    }
-})
+function renderProductos(){
+    productos.forEach(producto => {
+        ropaModerna.innerHTML += `
+        <div class="remeraEL1">
+                    <img src="${producto.imgSrc}" alt="${producto.nombre}">
+                </div>    
+                <div class="remeraEL1__texto" id="0">  
+                    <h3>${producto.nombre}</h3>
+                    <div>
+                        <p>${producto.precio}</p>
+                    </div>
+                    <button type="submit" onclick="addCart(${producto.id})">Agregar al carrito</button>
+                </div>
+
+                `
+    });
+}
+
+renderProductos();
+
+//Array carrito
+
+let cart =[];
+
+//Agregar al carrito
+
+function addCart(id){
+    const item = productos.find((producto) =>producto.id === id)
+
+    console.log(item)
+}
+
+
+
+
+
+
+
+
+
+// function btnAdd(id){
+//     const item = ropaModerna.find( (ropa) => ropa.id === id)
+//     console.log(item);
+// }
+
+
+
+
+// const btnAdd = document.getElementById("agregar-carrito")
+
+// btnAdd.onclick = ()=>{console.log("Agregaste a carrita un producto")}
+
 
 
 
