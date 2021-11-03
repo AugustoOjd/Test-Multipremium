@@ -200,117 +200,12 @@
 
 
 
-/*--------------------------                   SECCION DE REGISTRO                        --------------------------------*/
-
-const nombre = document.getElementById("name")
-const apellido = document.getElementById("lastName")
-const email = document.getElementById("email")
-const contraseña = document.getElementById("password")
-const contraseña2 = document.getElementById("password2")
-const form = document.getElementById("form")
-const parrafo = document.getElementById("warnings")
-const error = document.getElementById("error")
-
-
-form.addEventListener("submit", e=>{
-    let mensaje =[]
-    let regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
-
-    if(nombre.value === "" || nombre.value == null){
-        mensaje.push ("Nombre invalido")
-    }
-    if(apellido.value === "" || apellido.value == null){
-        mensaje.push ("Apellido invalido")
-    }
-    if(!regexEmail.test(email.value)){
-        mensaje.push ("Email invalido")
-    }
-    if(contraseña.value.length < 6){
-        mensaje.push ("La constraseña invalida")
-
-    }
-    if(contraseña.value.length >= 8){
-        mensaje.push ("La constraseña es muy larga")
-
-    }
-    if(contraseña.value.length != contraseña2.value.length){
-        mensaje.push("Las contraseñas no son iguales")
-    }
-    if(mensaje.length > 0){
-        e.preventDefault()
-        error.innerText = mensaje.join (`
-        `)
-    }else{
-        alert("Usuario creado correctamente")
-    }
-    
-    
-});
 
 
 
 
-/*----------------------------- SECCION ROPA EDICION MODERNA --------------------------------------*/
 
 
-
-//Array productos
-
-const productos=[
-    {
-        id: 0,
-        nombre: "Remera mujer verano",
-        precio: 800,
-        imgSrc: "../assest/remera1-edicionlimitada.jpg"
-    },
-    {
-        id: 1,
-        nombre: "Remera hombre verano",
-        precio: 1000,
-        imgSrc: "../assest/remera2-edicionlimitada.jpg"
-    },
-    {
-        id: 2,
-        nombre: "Remera casual verano",
-        precio: 900,
-        imgSrc: "../assest/remera3-moderno.png"
-    }
-
-]
-
-const ropaModerna = document.getElementById("catalogoModerna")
-
-function renderProductos(){
-    productos.forEach(producto => {
-        ropaModerna.innerHTML += `
-        <div class="remeraEL1">
-                    <img src="${producto.imgSrc}" alt="${producto.nombre}">
-                </div>    
-                <div class="remeraEL1__texto" id="0">  
-                    <h3>${producto.nombre}</h3>
-                    <div>
-                        <p>${producto.precio}</p>
-                    </div>
-                    <button type="submit" onclick="addCart(${producto.id})">Agregar al carrito</button>
-                </div>
-
-                `
-    });
-}
-
-renderProductos();
-
-//Array carrito
-
-let cart =[];
-
-//Agregar al carrito
-
-function addCart(id){
-    const item = productos.find((producto) =>producto.id === id)
-
-    console.log(item)
-}
 
 
 
