@@ -205,28 +205,3 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-// function btnAdd(id){
-//     const item = ropaModerna.find( (ropa) => ropa.id === id)
-//     console.log(item);
-// }
-
-
-
-
-// const btnAdd = document.getElementById("agregar-carrito")
-
-// btnAdd.onclick = ()=>{console.log("Agregaste a carrita un producto")}
-
-
-
-

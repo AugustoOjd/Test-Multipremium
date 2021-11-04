@@ -26,7 +26,8 @@ const productos=[
 
 ]
 
-const ropaModerna = document.getElementById("catalogoModerna")
+const ropaModerna = document.getElementById("catalogoModerna");
+const carrito = document.getElementById("contCarrito")
 
 function renderProductos(){
     productos.forEach(producto => {
@@ -57,5 +58,53 @@ let cart =[];
 function addCart(id){
     const item = productos.find((producto) =>producto.id === id)
 
-    console.log(item)
+    cart.push({
+        ...item,
+        numeroUnidades: 1,
+    })
+    console.log(cart)
+
+
+
+    updatecart();
+}
+
+//Borrar del carrito
+
+function borrarItem(id){
+
+    cart = cart.filter((item)=> item.id !== id)
+
+    updatecart();
+
+}
+
+
+
+/*Renderizar carrito*/
+
+function updatecart(){
+    renderCartItems();
+    //renderSubTotal();
+}
+
+function renderCartItems(){
+    cart.forEach(item => {
+        carrito.innerHTML += `
+        <div class="remeraEL1">
+                    <img src="${item.imgSrc}" alt="${item.nombre}">
+                </div>    
+                <div class="remeraEL1__texto">  
+                    <h3>${item.nombre}</h3>
+                    <div>
+                        <p>${item.precio}</p>
+                    </div>
+                    <div>
+                        ${item.numeroUnidades}
+                    </div>
+                    <button type="submit" onclick="borrarItem(${item.id})">Borrar</button>
+                </div>
+                
+        `
+    });
 }
