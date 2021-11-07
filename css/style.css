@@ -123,11 +123,7 @@ body{
 
 /*----------------------------Seccion header principal---------------------------*/
 
-header{
-  background-image: url(../assest/logo-header.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
 
 .descripcion h1 {
   color: white;
@@ -206,6 +202,7 @@ header{
   width: 200px;
   height: 185px;
 }
+
 
 /*-----------Seccion moderna pagina principal------------*/
 
@@ -445,8 +442,51 @@ footer div a{
 
 
 .contenedor__cuentaRegresiva{
-  background-color: white;
+  background-image: url(../assest/fondo-conteo-regresivo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 200px;
 }
+
+.contenedor__cuentaRegresiva h2{
+  font-size: 35px;
+  margin-top: -40px;
+  color: black;
+  text-shadow: 0 0 10px rgb(46, 130, 255);
+}
+
+.big-text{
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 1;
+  margin: 0 1.5rem;
+}
+
+.contEle{
+  background-color: white;
+  margin-left: 2px;
+  margin-right: 2px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.contEle span{
+  font-size: 1.5rem;
+}
+
+
+.cont--text{
+  display: flex;
+}
+
+
 
 .contenedor__edicionlimitada1{
   padding: 10px;
@@ -605,92 +645,3 @@ footer div a{
 }
 
 
-@media (min-width: 769px) {
-  .contenedor {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4);
-    grid-template-rows: repeat(8);
-    grid-template-areas: "menu menu menu menu"
-   "header header header header"
-   "sect1 sect1 sect1 sect1"
-   "sect2 sect2 sect2 sect2"
-   "sect3 sect3 sect3 sect3"
-   "sect4 sect4 sect4 sect4"
-   "sect5 sect5 sect5 sect5"
-   "footer footer footer footer ";
-  }
-
-  .contenedor .menu {
-    grid-area: menu;
-    width: 100%;
-    height: 100px;
-    
-  }
-  
-  .contenedor header {
-    grid-area: header;
-    width: 100%;
-    height: 800px;
-    padding: 5px;
-  }
-  
-  .contenedor .clasica {
-    grid-area: sect3;
-    width: 100%;
-    height: 800px;
-    padding: 5px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
-  
-  .contenedor .moderna {
-    grid-area: sect2;
-    width: 100%;
-    height: 800px;
-    padding: 5px;
-  
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
-  
-  .contenedor .unica {
-    grid-area: sect1;
-    width: 100%;
-    height: 800px;
-    padding: 5px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
-  
-  .contenedor .icon {
-    grid-area: sect4;
-    width: 100%;
-    height: 1000px;
-    padding: 5px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
-  
-  .contenedor .redes {
-    grid-area: sect5;
-    width: 100%;
-    height: 100px;
-    padding: 5px;
-  
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .contenedor footer {
-    grid-area: footer;
-    width: 100%;
-    height: 100px;
-  }
-  .menu li{
-    margin: 10px;
-    font-size: 20px;
-  }
-
-
-}
