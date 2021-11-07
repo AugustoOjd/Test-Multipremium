@@ -27,7 +27,9 @@ const productos=[
 ]
 
 const ropaModerna = document.getElementById("catalogoModerna");
-const carrito = document.getElementById("contCarrito")
+const carrito = document.getElementById("contCarrito");
+const subTotal = document.getElementById("subTotal");
+const totalProductosCarrito = document.getElementById("totalProductos");
 
 function renderProductos(){
     productos.forEach(producto => {
@@ -38,9 +40,10 @@ function renderProductos(){
                 <div class="remeraEL1__texto" id="0">  
                     <h3>${producto.nombre}</h3>
                     <div>
-                        <p>${producto.precio}</p>
+                        <p>$${producto.precio}</p>
                     </div>
-                    <button type="submit" onclick="addCart(${producto.id})">Agregar al carrito</button>
+                    <button type="submit" class="btn btn-primary" onclick="addCart(${producto.id})">Agregar al carrito</button>
+                    
                 </div>
 
                 `
@@ -56,17 +59,76 @@ let cart =[];
 //Agregar al carrito
 
 function addCart(id){
-    const item = productos.find((producto) =>producto.id === id)
+
+    if(cart.some((item)=> item.id ===id)){
+        cambioNumeroUnit("plus", id)
+    }else{
+        const item = productos.find((producto) =>producto.id === id)
 
     cart.push({
         ...item,
         numeroUnidades: 1,
     })
-    console.log(cart)
-
-
+    }
 
     updatecart();
+}
+
+
+/*Renderizar carrito*/
+
+function updatecart(){
+    renderCartItems();
+    renderSubTotal();
+
+}
+
+//Calcular y renderizar el precio de productos
+
+function renderSubTotal(){
+    let precioTotal = 0, totalItems = 0;
+
+    cart.forEach(item => {
+        precioTotal += item.precio * item.numeroUnidades;
+        totalItems += item.numeroUnidades;
+    });
+
+    subTotal.innerHTML = `
+            Subtotal (${totalItems} items): $${precioTotal}
+    `
+
+    if(totalItems >= 0){
+        totalProductosCarrito.innerHTML = totalItems
+    }else{
+        
+    }
+}
+
+function renderCartItems(){
+    carrito.innerHTML = "";
+    
+    cart.forEach(item => {
+        carrito.innerHTML += `
+        <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+            <button type="button" class="btn btn-warning" onclick="borrarItem(${item.id})">Borrar</button>
+            <div class="col-md-4">
+            <img src="${item.imgSrc}" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">${item.nombre}</h5>
+                <div><button type="button" class="btn btn-success" onclick="cambioNumeroUnit('plus', ${item.id})">+</button></div>
+                <div>${item.numeroUnidades}</div>
+                <div><button type="button" class="btn btn-danger" onclick="cambioNumeroUnit('minus', ${item.id})">-</button></div>
+            </div>
+            
+            </div>
+        </div>
+        </div>
+            
+        `
+    });
 }
 
 //Borrar del carrito
@@ -79,32 +141,30 @@ function borrarItem(id){
 
 }
 
+//Cambiar numero de unidades
 
+function cambioNumeroUnit(action, id){
+    cart = cart.map((item)=>{
 
-/*Renderizar carrito*/
+        let numeroUnidades = item.numeroUnidades;
 
-function updatecart(){
-    renderCartItems();
-    //renderSubTotal();
-}
+        if(item.id ===id){
+            if(action === 'plus'){
+                numeroUnidades++
+            }
+            else if(action === 'minus' && numeroUnidades > 1){
+                numeroUnidades--
+            }
+        }
 
-function renderCartItems(){
-    cart.forEach(item => {
-        carrito.innerHTML += `
-        <div class="remeraEL1">
-                    <img src="${item.imgSrc}" alt="${item.nombre}">
-                </div>    
-                <div class="remeraEL1__texto">  
-                    <h3>${item.nombre}</h3>
-                    <div>
-                        <p>${item.precio}</p>
-                    </div>
-                    <div>
-                        ${item.numeroUnidades}
-                    </div>
-                    <button type="submit" onclick="borrarItem(${item.id})">Borrar</button>
-                </div>
-                
-        `
+        return{
+            ...item,
+            numeroUnidades,
+        }
+
     });
+
+    updatecart();
 }
+
+

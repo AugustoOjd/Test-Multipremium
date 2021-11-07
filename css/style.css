@@ -13,7 +13,7 @@ body{
 .contenedor {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  grid-template-columns: repeat(4);
   grid-template-rows: repeat(8);
   grid-template-areas: "menu menu menu menu"
  "header header header header"
@@ -37,6 +37,7 @@ body{
   width: 100%;
   height: 500px;
   padding: 5px;
+
 }
 
 .contenedor .clasica {
@@ -113,7 +114,7 @@ body{
 
 .carrito{
   position: absolute;
-  left: 350px;
+  left: 330px;
   margin: 10px;
   border-radius: 15px;
 }
@@ -121,6 +122,12 @@ body{
 
 
 /*----------------------------Seccion header principal---------------------------*/
+
+header{
+  background-image: url(../assest/logo-header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .descripcion h1 {
   color: white;
@@ -203,10 +210,11 @@ body{
 /*-----------Seccion moderna pagina principal------------*/
 
 .tituloModerna{
-  background-color: white;
+  background-color: rgb(46, 130, 255);
   border-radius: 40px;
   border: solid 3px rgb(46, 130, 255);
   height: 70px;
+  color: white;
 }
 
 .tituloModerna h2{
@@ -284,11 +292,12 @@ body{
   font-size: 40px;
   font-weight: 500;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: white;
+  background-color: rgb(46, 130, 255);
+  
   border-radius: 30px;
   
   border: solid 3px rgb(46, 130, 255);
-  color: rgb(0, 0, 0);
+  color: white;
   
   text-align: center;
 }
@@ -302,8 +311,8 @@ body{
   font-size: 40px;
   font-weight: 500;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: rgb(0, 0, 0);
-  background-color: white;
+  color: white;
+  background-color: rgb(46,130,255);
   border-radius: 30px;
   
   border: solid 3px rgb(46, 130, 255);
@@ -380,9 +389,9 @@ body{
 /*------------Seccion footer------------*/
 
 footer{
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(46, 130, 255);
   border: solid 5px rgb(46,130, 255);
-  border-radius: 30px;
+  border-radius: 20px
 }
 
 footer div{
@@ -395,6 +404,7 @@ footer div{
 }
 
 footer div a{
+  color: white;
   font-weight: 700;
   text-decoration: none;
   
@@ -516,6 +526,11 @@ footer div a{
   font-size: 20px;
 }
 
+.btnAgregar{
+  color: white;
+  background-color: rgb(46, 130, 255);
+}
+
 /*pantalon1*/
 
 .contenedor__edicionlimitada2{
@@ -587,4 +602,95 @@ footer div a{
   margin-left: 130px;
   margin-top: -160px;
   height: 140px;
+}
+
+
+@media (min-width: 769px) {
+  .contenedor {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4);
+    grid-template-rows: repeat(8);
+    grid-template-areas: "menu menu menu menu"
+   "header header header header"
+   "sect1 sect1 sect1 sect1"
+   "sect2 sect2 sect2 sect2"
+   "sect3 sect3 sect3 sect3"
+   "sect4 sect4 sect4 sect4"
+   "sect5 sect5 sect5 sect5"
+   "footer footer footer footer ";
+  }
+
+  .contenedor .menu {
+    grid-area: menu;
+    width: 100%;
+    height: 100px;
+    
+  }
+  
+  .contenedor header {
+    grid-area: header;
+    width: 100%;
+    height: 800px;
+    padding: 5px;
+  }
+  
+  .contenedor .clasica {
+    grid-area: sect3;
+    width: 100%;
+    height: 800px;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .contenedor .moderna {
+    grid-area: sect2;
+    width: 100%;
+    height: 800px;
+    padding: 5px;
+  
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .contenedor .unica {
+    grid-area: sect1;
+    width: 100%;
+    height: 800px;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .contenedor .icon {
+    grid-area: sect4;
+    width: 100%;
+    height: 1000px;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .contenedor .redes {
+    grid-area: sect5;
+    width: 100%;
+    height: 100px;
+    padding: 5px;
+  
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .contenedor footer {
+    grid-area: footer;
+    width: 100%;
+    height: 100px;
+  }
+  .menu li{
+    margin: 10px;
+    font-size: 20px;
+  }
+
+
 }

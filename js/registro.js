@@ -9,7 +9,6 @@ const email = document.getElementById("email")
 const contraseña = document.getElementById("password")
 const contraseña2 = document.getElementById("password2")
 const form = document.getElementById("form")
-const parrafo = document.getElementById("warnings")
 const error = document.getElementById("error")
 
 form.addEventListener("submit", e=>{

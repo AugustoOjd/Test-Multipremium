@@ -52,7 +52,7 @@
         <header>
             <div class="descripcion">
                 <div class="card bg-dark text-white">
-                    <img src="assest/logo-header.jpg" class="card-img" alt="premium" style="height: 500px;">
+                    
                     <div class="card-img-overlay">
                         <h1 class="card-title tituloPremium">Premium</h1>
                         <p class="card-text textoPremium">No seas uno más del promedio, marca la diferencia.</p>
@@ -106,7 +106,8 @@
 
                 <!-- Button trigger modal -->
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            <img src="../assest/carritox2.png" alt="carrito de compras" class="carrito--img">
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="totalProductos" ></span>
+                                <img src="../assest/carritox2.png" alt="carrito de compras" class="carrito--img" id="cartVacio">
                         </button>
                 
                 <!-- Modal -->
@@ -120,7 +121,10 @@
                                 <div class="modal-body" id="contCarrito">
                                     
                                     <!--Render de productos en carrito-->
+                                </div>
+                                <div id="subTotal">
 
+                                    <!--Render subtotal precio-->
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -129,7 +133,7 @@
                             </div>
                         </div>
                     </div>
-                    </div>
+            </div>
     
     
     
