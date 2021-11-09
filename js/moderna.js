@@ -54,7 +54,8 @@ renderProductos();
 
 //Array carrito
 
-let cart =[];
+let cart = JSON.parse(localStorage.getItem("CART"));
+updatecart();
 
 //Agregar al carrito
 
@@ -80,6 +81,10 @@ function addCart(id){
 function updatecart(){
     renderCartItems();
     renderSubTotal();
+
+    //local storage cart
+
+    localStorage.setItem("CART", JSON.stringify(cart))
 
 }
 
@@ -166,5 +171,7 @@ function cambioNumeroUnit(action, id){
 
     updatecart();
 }
+
+localStorage.setItem("list", JSON.stringify(cart));
 
 

@@ -86,61 +86,18 @@
                 </div>
             </div>
             
-            <div class="contenedor__edicionlimitada1">
-                <div class="remeraEL1">
-                    <img src="../assest/remera1-edicionlimitada.jpg" alt="remera1">
-                </div>    
-                <div class="remeraEL1__texto">  
-                    <h3>Remera mujer verano</h3>
-                    
-                    <div>
-                        <p>Precio: $1200</p>
-                    </div>
-                    <button>Agregar al carrito</button>
-            </div>
-
-                <div class="remeraEL1">
-                    <img src="../assest/remera1-edicionlimitada.jpg" alt="remera1">
-                </div>    
-                <div class="remeraEL1__texto">  
-                    <h3>Remera mujer verano</h3>
-                    
-                    <div>
-                        <p>Precio: $1500</p>
-                    </div>
-                    <button>Agregar al carrito</button>
-                </div>
-
+            <div class="contenedor__edicionlimitada1" id="catalogoLimi">
+                
+                <!--RENDER PRIMER ARRAY DE REMERAS-->
             
-        </div>
+            </div>
         </section>
         
         <section class="moderna">
 
-            <div class="contenedor__edicionlimitada2">
-                <div class="pantalonEL1">
-                    <img src="../assest/pantalon1-edicionlimiada.jpg" alt="pantalon1">
-                </div>    
-                <div class="pantalonEL1__texto">  
-                    <h3>Pantalon mujer</h3>
-                    
-                    <div>
-                        <p>Precio: $1600</p>
-                    </div>
-                    <button>Agregar al carrito</button>
-                    </div>
-
-                    <div class="pantalonEL2">
-                        <img src="../assest/pantalon2-edicionlimitada.jpg" alt="pantalon2">
-                    </div>    
-                    <div class="pantalonEL2__texto">  
-                        <h3>pantalon hombre</h3>
-                        
-                        <div>
-                            <p>Precio: $1800</p>
-                        </div>
-                        <button>Agregar al carrito</button>
-                        </div>
+            <div class="contenedor__edicionlimitada2" id="catalogoLimi2">
+                
+                <!--RENDER SEGUNDO ARRAY DE PANTALONES-->
                 
             </div>
         </section> 
@@ -181,9 +138,36 @@
             </footer>
 
         <div class="carrito">
-            <a href="carrito.html">
+                <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="totalProductos" ></span>
                 <img src="../assest/carritox2.png" alt="carrito de compras" class="carrito--img">
-            </a>
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Carrito de compras</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" id="contCarrito">
+                            
+                            <!--Render de productos en carrito-->
+                        </div>
+                        <div id="subTotal">
+
+                            <!--Render subtotal precio-->
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Comprar productos</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
     <script src="../js/main.js"></script>
