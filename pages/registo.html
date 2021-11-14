@@ -53,7 +53,7 @@
         <header>
             <div class="descripcion">
                 <div class="card bg-dark text-white">
-                    <img src="assest/logo-header.jpg" class="card-img" alt="premium" style="height: 500px;">
+                    <img src="../assest/logo-header.jpg" class="card-img" alt="premium" style="height: 500px;">
                     <div class="card-img-overlay">
                         <h1 class="card-title tituloPremium">Premium</h1>
                         <p class="card-text textoPremium">No seas uno más del promedio, marca la diferencia.</p>
@@ -135,9 +135,34 @@
             </footer>
 
         <div class="carrito">
-            <a href="carrito.html">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="totalProductos" ></span>
                 <img src="../assest/carritox2.png" alt="carrito de compras" class="carrito--img">
-            </a>
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Carrito de compras</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" id="contCarrito">
+                            
+                            <!--Render de productos en carrito-->
+                        </div>
+                        <div id="subTotal">
+
+                            <!--Render subtotal precio-->
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Comprar productos</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <script src="../js/registro.js"></script>

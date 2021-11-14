@@ -88,7 +88,7 @@ function renderProductos(){
                 <div>
                     <p>$${producto.precio}</p>
                 </div>
-                    <button type="submit" class="btn btn-primary" onclick="addCart(${producto.id})">Agregar al carrito</button>
+                    <button type="submit" class="btn btn-primary addCart" onclick="addCart(${producto.id})">Agregar al carrito</button>
         
         </div>
 

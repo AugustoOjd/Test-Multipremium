@@ -26,15 +26,19 @@ const productos=[
 
 ]
 
+
+
 const ropaModerna = document.getElementById("catalogoModerna");
 const carrito = document.getElementById("contCarrito");
 const subTotal = document.getElementById("subTotal");
 const totalProductosCarrito = document.getElementById("totalProductos");
 
+
+
 function renderProductos(){
     productos.forEach(producto => {
         ropaModerna.innerHTML += `
-        <div class="remeraEL1">
+        <div class="remeraEL1" >
                     <img src="${producto.imgSrc}" alt="${producto.nombre}">
                 </div>    
                 <div class="remeraEL1__texto" id="0">  
@@ -42,7 +46,7 @@ function renderProductos(){
                     <div>
                         <p>$${producto.precio}</p>
                     </div>
-                    <button type="submit" class="btn btn-primary" onclick="addCart(${producto.id})">Agregar al carrito</button>
+                    <button type="submit" class="btn btn-primary addCart" onclick="addCart(${producto.id})">Agregar al carrito</button>
                     
                 </div>
 
@@ -175,5 +179,6 @@ function cambioNumeroUnit(action, id){
 }
 
 localStorage.setItem("list", JSON.stringify(cart));
+
 
 
