@@ -20,3 +20,9 @@ const ropaClasica=[
         imgSrc: "../assest/pantalon-clasico.jpg"
     }
 ]
+
+const ropaClasica2=[
+    {
+        imgSrc: "../assest/camisa-classic1.png"
+    }
+]

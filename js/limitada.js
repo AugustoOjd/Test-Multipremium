@@ -53,16 +53,17 @@ const productos=[
         precio: 850,
         imgSrc: "../assest/remera-limitada2.jpg"
     },
-
-]
-
-const productos2=[
     {
         id: 5,
         nombre: "pantalon limi 1",
         precio: 1900,
         imgSrc: "../assest/pantalon1-edicionlimiada.jpg"
-    },
+    }
+
+]
+
+const productos2=[
+
     {
         id: 6,
         nombre: "pantalon limi 2",
@@ -96,29 +97,9 @@ function renderProductos(){
     });
 }
 
-function renderProductos2(){
-    productos2.forEach(producto2 =>{
-        ropaLimitada2.innerHTML +=`
-        <div class="pantalonEL1">
-                    <img src="${producto2.imgSrc}" alt="${producto2.nombre}">
-                </div>    
-                <div class="pantalonEL1__texto">  
-                    <h3>${producto2.nombre}</h3>
-                    
-                    <div>
-                        <p>$${producto2.precio}</p>
-                    </div>
-                    <button type="submit" class="btn btn-primary" onclick="addCart(${producto2.id})">Agregar al carrito</button>
-        
-        </div>
-        `
-    })
-}
-
 
 
 renderProductos();
-renderProductos2();
 
 //Array carrito
 

@@ -1,23 +1,57 @@
-/*--------------------------SECCION ROPA CLASICA----------------------------------*/
+
+/*--------------cambio de ropa------------*/
+
+
+
+$(()=>{
+    $(".imgRopa2").hide()
+
+    $(".imgRopa").mouseenter(function(e){
+
+        let img = (e.target)
+        
+        $(img).fadeOut("fast", function(){
+            
+            $(".imgRopa2").fadeIn("fast", function(){
+                
+                
+                $(".imgRopa2").mouseleave(function(){
+
+                    
+
+                    $(".imgRopa2").fadeOut("fast", function(){
+                        
+                        $(".imgRopa").fadeIn("fast")
+                    
+                    })
+                
+                })
+            
+            })
+        
+        })
+    
+    })
+
+
+
+})
 
 
 
 
-
+/*--------------------------animacion boton agregar al carrito----------------------------------*/
 
 $(()=>{
 
     $(".addCart").click(function(){
         $(this).css("background-color", "green")
             $(".contenedor__edicionlimitada1").prepend(`
-            <div class="alert alert-success" role="alert">
+            <div class="alert alert-success" role="alert" style="position: absolute">
                 Agregaste un producto al carrito!
             </div>`)
             $(".alert-success").fadeOut(2500)
 
-
-
-            
 
     })
 
@@ -41,13 +75,16 @@ $(()=>{
 });
 
 
+/*---------------------RENDER PRODUCTOS ROPA CLASICA--------------------*/
+/*<img src="../assest/camisa-classic1.png" alt="" class="imgRopa2"></img>*/
 
 for (const producto of ropaClasica) {
     $("#clasica").append(`
     
                 <div class="remeraEL1">
-                    <img src="${producto.imgSrc}" alt="${producto.nombre}">
-                </div>    
+                    <img src="${producto.imgSrc}" alt="${producto.nombre}"  class="imgRopa">
+                    <img src="../assest/camisa-classic1.png" alt="" class="imgRopa2"></img>
+                </div>
                 <div class="remeraEL1__texto">  
                     <h3>${producto.nombre}</h3>
                     <div>
@@ -56,10 +93,11 @@ for (const producto of ropaClasica) {
                     <button type="button" class="btn btn-primary addCart">Agregar al carrito</button>
                 </div>
     
-
     `)
     
 }
+
+
 
 
 
