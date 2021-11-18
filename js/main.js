@@ -6,32 +6,44 @@
 $(()=>{
     $(".imgRopa2").hide()
 
-    $(".imgRopa").mouseenter(function(e){
+    $(".imgRopa").mouseenter(function(){
+        $(".imgRopa2").fadeTo("fast", 0.5, function(){
 
-        let img = (e.target)
-        
-        $(img).fadeOut("fast", function(){
-            
-            $(".imgRopa2").fadeIn("fast", function(){
-                
-                
-                $(".imgRopa2").mouseleave(function(){
+            $(".imgRopa").mouseleave(function(){
+                $(".imgRopa2").fadeOut(function(){
 
-                    
-
-                    $(".imgRopa2").fadeOut("fast", function(){
-                        
-                        $(".imgRopa").fadeIn("fast")
-                    
-                    })
-                
                 })
-            
             })
-        
         })
-    
+
     })
+
+    // $(".imgRopa").mouseenter(function(e){
+
+    //     let img = (e.target)
+        
+    //     $(img).fadeto("fast", 0.5, function(){
+            
+    //         $(".imgRopa2").fadeIn("fast", function(){
+                
+                
+    //             $(".imgRopa2").mouseleave(function(){
+
+                    
+
+    //                 $(".imgRopa2").fadeOut("fast", function(){
+                        
+    //                     $(".imgRopa").fadeIn("fast")
+                    
+    //                 })
+                
+    //             })
+            
+    //         })
+        
+    //     })
+    
+    // })
 
 
 
@@ -83,7 +95,7 @@ for (const producto of ropaClasica) {
     
                 <div class="remeraEL1">
                     <img src="${producto.imgSrc}" alt="${producto.nombre}"  class="imgRopa">
-                    <img src="../assest/camisa-classic1.png" alt="" class="imgRopa2"></img>
+                    <img src="../assest/oferta.jpg" alt="" class="imgRopa2"></img>
                 </div>
                 <div class="remeraEL1__texto">  
                     <h3>${producto.nombre}</h3>
