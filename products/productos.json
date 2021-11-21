@@ -1,0 +1,50 @@
+{
+    
+    "ropaLimitada":[
+        {
+            "id": 3,
+            "nombre": "Remera limi uno",
+            "precio": 1100,
+            "imgSrc": "../assest/remera-limitada.jpg"
+        },
+        {
+            "id": 4,
+            "nombre": "Remera limi dos",
+            "precio": 850,
+            "imgSrc": "../assest/remera-limitada2.jpg"
+        },
+        {
+            "id": 5,
+            "nombre": "pantalon limi 1",
+            "precio": 1900,
+            "imgSrc": "../assest/pantalon1-edicionlimiada.jpg"
+        }
+    ],
+    
+    
+    
+    
+    "ropaClasica":[
+        {
+            "id": 6,
+            "nombre": "Camisa uno",
+            "precio": 1800,
+            "imgSrc": "../assest/camisa1.jpg"
+        },
+        {
+            "id": 7,
+            "nombre": "Camisa dos",
+            "precio": 1700,
+            "imgSrc": "../assest/camisa2.jpg"
+        },
+        {
+            "id": 8,
+            "nombre": "Pantalon",
+            "precio": 2500,
+            "imgSrc": "../assest/pantalon-clasico.jpg"
+        }
+
+    ]
+
+
+}

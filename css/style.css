@@ -123,7 +123,10 @@ body{
 
 /*----------------------------Seccion header principal---------------------------*/
 
-
+header img{
+  width: 100%;
+  height: 500px;
+}
 
 .descripcion h1 {
   color: white;
@@ -225,19 +228,19 @@ body{
 
 .contenedorCarousel{
   width: 100%;
-  height: 470px;
+  height: 450px;
 
   padding: 10px;
 }
 
 .img__carousel{
   width: 100px;
-  height: 470px;
+  height: 450px;
 
 }
 
 .button__moderna{
-  margin-top: 5px;
+  margin-top: 20px;
 }
 
 /*---------Seccion ropa clasica pagina principal-------------*/
@@ -252,6 +255,7 @@ body{
   height: 300px;
   
 }
+
 
 .cont__clasica--text h2{
   font-family: sans-serif;
@@ -274,6 +278,10 @@ body{
 .cont_clasica--boton{
   display: flex;
   justify-content: end;
+}
+
+.grupoCartas{
+  display: none;
 }
 
 
@@ -656,5 +664,302 @@ footer div a{
   height: 500px;
   width: 500px;
 }
+
+/*---------------                         responsive                                 --------------*/
+
+@media (min-width: 780px){
+  
+  body{
+    background-color: white;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .menu ul li{
+    font-size: 40px;
+    margin-left: 50px;
+  }
+
+
+  .tamañoMenu {
+    font-size: 40px;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .logoMenu{
+    font-size: 100px;
+  }
+
+  .contenedor {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4);
+    grid-template-rows: repeat(8);
+    grid-template-areas: "menu menu menu menu"
+   "header header header header"
+   "sect1 sect1 sect1 sect1"
+   "sect2 sect2 sect2 sect2"
+   "sect3 sect3 sect3 sect3"
+   "sect4 sect4 sect4 sect4"
+   "sect5 sect5 sect5 sect5"
+   "footer footer footer footer ";
+  }
+
+  /*HEADER*/
+  
+  .contenedor header {
+    grid-area: header;
+    width: 100%;
+    height: 850px;
+    padding: 5px;
+  
+  }
+
+  header img{
+    width: 100%;
+    height: 850px;
+  }
+
+  .descripcion h1 {
+    color: white;
+    font-family: 'Domine', serif;
+  }
+  
+  .descripcion p {
+    display: flex;
+    color: white;
+    font-family: 'Cinzel', serif;
+  }
+  
+  .tituloPremium {
+    font-size: 200px;
+    font-style: oblique;
+  }
+  
+  .textoPremium {
+    font-size: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+    width: 50px;
+  }
+
+  /*------------------------Carrito flotante------------------------------*/
+
+  .carrito{
+    position: absolute;
+    left: 90%;
+    margin: 20px;
+    border-radius: 15px;
+  }
+
+  .carrito button{
+    position: fixed;
+    width: 110px;
+    height: 110px;
+  }
+
+  .carrito img{
+    width: 75px;
+    height: 75px;
+  }
+
+  /*----- unica index*/
+  
+  .contenedor .unica {
+    grid-area: sect1;
+    width: 100%;
+    height: 1300px;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  /*------------------------Seccion edicion limiada pagina principal------------------------*/
+
+.unica__img{
+  background-image: url(../assest/edicion-limitada-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 1300px;
+}
+
+.unica__titulo{
+  color: white;
+  font-size: 120px;
+  font-weight: 800;
+  display: flex;
+  justify-content: end;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 15px;
+  text-shadow: 10px 10px rgb(0, 0, 0);
+
+  border-bottom: solid 15px rgb(77, 205, 255);
+  
+}
+
+.unica__texto{
+  color: white;
+  font-size: 90px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  text-shadow: 10px 10px rgb(0, 0, 0);
+  
+  text-align: end;
+  padding-left: 100px;
+  padding-right: 20px;
+  font-weight: 500;
+  
+}
+
+.unica__carousel{
+  display: block;
+  height: 400px;
+  width: 500px;
+  border: solid 15px rgb(46, 130, 255);
+  border-radius: 15px;
+}
+
+.unica__carousel img{
+  border-radius: 10px;
+  height: 370px;
+  width: 500px;
+  border-radius: 1px;
+}
+  
+/*-----condenedor moderna index*/
+
+  .contenedor .moderna {
+    grid-area: sect2;
+    width: 100%;
+    height: 1200px;
+    padding: 5px;
+  
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  /*-----------Seccion moderna pagina principal------------*/
+
+
+.tituloModerna{
+  height: 150px;
+  background-color: black;
+}
+
+.tituloModerna h2{
+  color: white;
+  font-size: 100px;
+}
+
+.contenedorCarousel{
+  border-radius: 20px;
+  height: 950px
+  
+}
+
+.img__carousel{
+  height: 950px;
+  border-radius: 20px;
+
+}
+
+.button__moderna{
+  font-size: 30px;
+  margin-top: 30px;
+}
+
+/*----contenedor clasica index*/
+
+  .contenedor .clasica {
+    grid-area: sect3;
+    width: 100%;
+    height: 1200px;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  /*---------Seccion ropa clasica pagina principal-------------*/
+
+
+
+.clasica img{
+  
+  width: 100%;
+  height: 1200px;
+  
+}
+
+.cont__clasica--text h2{
+  font-family: sans-serif;
+  font-weight: 600;
+  text-shadow: 10px 10px black;
+  
+  font-size: 120px;
+  font-weight: 900;
+  border-bottom: solid 20px black;
+}
+
+.cont__clasica--text p{
+  font-size: 90px;
+  font-weight: 600;
+  text-align: end;
+  text-shadow: 8px 8px black;
+
+  margin-top: 100px;
+}
+
+.cont_clasica--boton{
+  margin-top: 80px;
+  display: flex;
+  justify-content: end;
+}
+
+.cont_clasica--boton a{
+  font-size: 50px;
+}
+
+  
+  .contenedor .icon {
+    grid-area: sect4;
+    width: 100%;
+    height: 1000px;
+    padding: 5px;
+    margin-top: 100px;
+    margin-bottom: 5px;
+  }
+  
+  .contenedor .redes {
+    grid-area: sect5;
+    width: 100%;
+    height: 200px;
+    padding: 5px;
+  
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .contenedor footer {
+    grid-area: footer;
+    width: 100%;
+    height: 100px;
+  }
+
+  
+
+
+
+}
+
 
 

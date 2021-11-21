@@ -62,18 +62,7 @@ const productos=[
 
 ]
 
-const productos2=[
-
-    {
-        id: 6,
-        nombre: "pantalon limi 2",
-        precio: 1500,
-        imgSrc: "../assest/pantalon2-edicionlimitada.jpg" 
-    }
-]
-
 const ropaLimitada = document.getElementById("catalogoLimi");
-const ropaLimitada2 = document.getElementById("catalogoLimi2")
 const carrito = document.getElementById("contCarrito");
 const subTotal = document.getElementById("subTotal");
 const totalProductosCarrito = document.getElementById("totalProductos");

@@ -1,55 +1,4 @@
 
-/*--------------cambio de ropa------------*/
-
-
-
-$(()=>{
-    $(".imgRopa2").hide()
-
-    $(".imgRopa").mouseenter(function(){
-        $(".imgRopa2").fadeTo("fast", 0.5, function(){
-
-            $(".imgRopa").mouseleave(function(){
-                $(".imgRopa2").fadeOut(function(){
-
-                })
-            })
-        })
-
-    })
-
-    // $(".imgRopa").mouseenter(function(e){
-
-    //     let img = (e.target)
-        
-    //     $(img).fadeto("fast", 0.5, function(){
-            
-    //         $(".imgRopa2").fadeIn("fast", function(){
-                
-                
-    //             $(".imgRopa2").mouseleave(function(){
-
-                    
-
-    //                 $(".imgRopa2").fadeOut("fast", function(){
-                        
-    //                     $(".imgRopa").fadeIn("fast")
-                    
-    //                 })
-                
-    //             })
-            
-    //         })
-        
-    //     })
-    
-    // })
-
-
-
-})
-
-
 
 
 /*--------------------------animacion boton agregar al carrito----------------------------------*/
@@ -79,35 +28,11 @@ $(()=>{
         })
     })
 
-
-
-
-
     
 });
 
 
-/*---------------------RENDER PRODUCTOS ROPA CLASICA--------------------*/
-/*<img src="../assest/camisa-classic1.png" alt="" class="imgRopa2"></img>*/
 
-for (const producto of ropaClasica) {
-    $("#clasica").append(`
-    
-                <div class="remeraEL1">
-                    <img src="${producto.imgSrc}" alt="${producto.nombre}"  class="imgRopa">
-                    <img src="../assest/oferta.jpg" alt="" class="imgRopa2"></img>
-                </div>
-                <div class="remeraEL1__texto">  
-                    <h3>${producto.nombre}</h3>
-                    <div>
-                        <p>$${producto.precio}</p>
-                    </div>
-                    <button type="button" class="btn btn-primary addCart">Agregar al carrito</button>
-                </div>
-    
-    `)
-    
-}
 
 
 
