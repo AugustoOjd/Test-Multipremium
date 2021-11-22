@@ -25,7 +25,7 @@ form.addEventListener("submit", e=>{
         mensaje.push ("Email invalido")
     }
     if(contraseña.value.length < 6){
-        mensaje.push ("La constraseña invalida")
+        mensaje.push ("Constraseña invalida")
 
     }
     if(contraseña.value.length >= 8){
