@@ -598,6 +598,7 @@ footer div a{
 
 .btcContainer span{
   color: white;
+  font-size: 20px;
 }
 
 .ethContainer img{
@@ -608,6 +609,7 @@ footer div a{
 
 .ethContainer span{
   color: white;
+  font-size: 20px;
 }
 
 /*-----------------------------        responsive            --------------------*/
@@ -1188,6 +1190,7 @@ footer div a{
 
 .btcContainer span{
   color: white;
+  font-size: 17px;
 }
 
 .ethContainer img{
@@ -1197,6 +1200,7 @@ footer div a{
 
 .ethContainer span{
   color: white;
+  font-size: 17px;
 }
 
 

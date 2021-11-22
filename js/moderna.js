@@ -29,9 +29,9 @@ const productos=[
 
 
 const ropaModerna = document.getElementById("catalogoModerna");
-const carrito = document.getElementById("contCarrito");
-const subTotal = document.getElementById("subTotal");
-const totalProductosCarrito = document.getElementById("totalProductos");
+// const carrito = document.getElementById("contCarrito");
+// const subTotal = document.getElementById("subTotal");
+// const totalProductosCarrito = document.getElementById("totalProductos");
 
 
 
@@ -60,125 +60,125 @@ renderProductos();
 
 // let cart = []
 
-let cart = JSON.parse(localStorage.getItem("CART"));
-updatecart();
+// let cart = JSON.parse(localStorage.getItem(null)) || [];
+// updatecart();
 
 //Agregar al carrito
 
-function addCart(id){
+// function addCart(id){
 
-    if(cart.some((item)=> item.id ===id)){
-        cambioNumeroUnit("plus", id)
-    }else{
-        const item = productos.find((producto) =>producto.id === id)
+//     if(cart.some((item)=> item.id ===id)){
+//         cambioNumeroUnit("plus", id)
+//     }else{
+//         const item = productos.find((producto) =>producto.id === id)
 
-    cart.push({
-        ...item,
-        numeroUnidades: 1,
-    })
-    }
+//     cart.push({
+//         ...item,
+//         numeroUnidades: 1,
+//     })
+//     }
 
-    updatecart();
-}
+//     updatecart();
+// }
 
 
 /*Renderizar carrito*/
 
-function updatecart(){
-    renderCartItems();
-    renderSubTotal();
+// function updatecart(){
+//     renderCartItems();
+//     renderSubTotal();
 
-    //local storage cart
+//     //local storage cart
 
-    localStorage.setItem("CART", JSON.stringify(cart))
+//     localStorage.setItem("CART", JSON.stringify(cart))
 
-}
+// }
 
 //Calcular y renderizar el precio de productos
 
-function renderSubTotal(){
-    let precioTotal = 0, totalItems = 0;
+// function renderSubTotal(){
+//     let precioTotal = 0, totalItems = 0;
 
-    cart.forEach(item => {
-        precioTotal += item.precio * item.numeroUnidades;
-        totalItems += item.numeroUnidades;
-    });
+//     cart.forEach(item => {
+//         precioTotal += item.precio * item.numeroUnidades;
+//         totalItems += item.numeroUnidades;
+//     });
 
-    subTotal.innerHTML = `
-            Subtotal (${totalItems} items): $${precioTotal}
-    `
+//     subTotal.innerHTML = `
+//             Subtotal (${totalItems} items): $${precioTotal}
+//     `
 
-    if(totalItems >= 0){
-        totalProductosCarrito.innerHTML = totalItems
-    }else{
+//     if(totalItems >= 0){
+//         totalProductosCarrito.innerHTML = totalItems
+//     }else{
         
-    }
-}
+//     }
+// }
 
-function renderCartItems(){
-    carrito.innerHTML = "";
+// function renderCartItems(){
+//     carrito.innerHTML = "";
     
-    cart.forEach(item => {
-        carrito.innerHTML += `
-        <div class="card mb-3" style="max-width: 540px;">
-        <div class="row g-0">
-            <button type="button" class="btn btn-warning" onclick="borrarItem(${item.id})">Borrar</button>
-            <div class="col-md-4">
-            <img src="${item.imgSrc}" class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-md-8">
-            <div class="card-body">
-                <h5 class="card-title">${item.nombre}</h5>
-                <div><button type="button" class="btn btn-success" onclick="cambioNumeroUnit('plus', ${item.id})">+</button></div>
-                <div>${item.numeroUnidades}</div>
-                <div><button type="button" class="btn btn-danger" onclick="cambioNumeroUnit('minus', ${item.id})">-</button></div>
-            </div>
+//     cart.forEach(item => {
+//         carrito.innerHTML += `
+//         <div class="card mb-3" style="max-width: 540px;">
+//         <div class="row g-0">
+//             <button type="button" class="btn btn-warning" onclick="borrarItem(${item.id})">Borrar</button>
+//             <div class="col-md-4">
+//             <img src="${item.imgSrc}" class="img-fluid rounded-start" alt="...">
+//             </div>
+//             <div class="col-md-8">
+//             <div class="card-body">
+//                 <h5 class="card-title">${item.nombre}</h5>
+//                 <div><button type="button" class="btn btn-success" onclick="cambioNumeroUnit('plus', ${item.id})">+</button></div>
+//                 <div>${item.numeroUnidades}</div>
+//                 <div><button type="button" class="btn btn-danger" onclick="cambioNumeroUnit('minus', ${item.id})">-</button></div>
+//             </div>
             
-            </div>
-        </div>
-        </div>
+//             </div>
+//         </div>
+//         </div>
             
-        `
-    });
-}
+//         `
+//     });
+// }
 
-//Borrar del carrito
+// //Borrar del carrito
 
-function borrarItem(id){
+// function borrarItem(id){
 
-    cart = cart.filter((item)=> item.id !== id)
+//     cart = cart.filter((item)=> item.id !== id)
 
-    updatecart();
+//     updatecart();
 
-}
+// }
 
-//Cambiar numero de unidades
+// //Cambiar numero de unidades
 
-function cambioNumeroUnit(action, id){
-    cart = cart.map((item)=>{
+// function cambioNumeroUnit(action, id){
+//     cart = cart.map((item)=>{
 
-        let numeroUnidades = item.numeroUnidades;
+//         let numeroUnidades = item.numeroUnidades;
 
-        if(item.id ===id){
-            if(action === 'plus'){
-                numeroUnidades++
-            }
-            else if(action === 'minus' && numeroUnidades > 1){
-                numeroUnidades--
-            }
-        }
+//         if(item.id ===id){
+//             if(action === 'plus'){
+//                 numeroUnidades++
+//             }
+//             else if(action === 'minus' && numeroUnidades > 1){
+//                 numeroUnidades--
+//             }
+//         }
 
-        return{
-            ...item,
-            numeroUnidades,
-        }
+//         return{
+//             ...item,
+//             numeroUnidades,
+//         }
 
-    });
+//     });
 
-    updatecart();
-}
+//     updatecart();
+// }
 
-localStorage.setItem("list", JSON.stringify(cart));
+// localStorage.setItem("list", JSON.stringify(cart));
 
 
 

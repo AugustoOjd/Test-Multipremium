@@ -47,15 +47,15 @@
                         <div class="btcContainer">
                             <img src="assest/logo-btc.png.crdownload" alt="btc">
                             <span class="btcPrecio">
-                                99999
+                                
                             </span>
                         </div>
                     </li>
                     <li>
                         <div class="ethContainer">
                             <img src="assest/logo-eth-pequeño.png" alt="eth">
-                            <span class="uthPrecio">
-                                99999
+                            <span class="ethPrecio">
+                                
                             </span>
                         </div>
                     </li>
@@ -208,33 +208,41 @@
             </div>
         </footer>
 
-    <div class="carrito">
+    
 
 <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            <img src="assest/carritox2.png" alt="carrito de compras" class="carrito--img">
-        </button>
+<div class="carrito">
 
-    </div>    
+    <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="totalProductos" ></span>
+                    <img src="assest/carritox2.png" alt="carrito de compras" class="carrito--img">
+            </button>
 
-<!-- Modal -->
-    <div class="modal fade contCarrito" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Comprar productos</button>
-                </div>
-            </div>
         </div>
-    </div>
+            <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Carrito de compras</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body" id="contCarrito">
+                                
+                                <!--Render de productos en carrito-->
+                            </div>
+                            <div id="subTotal">
+
+                                <!--Render subtotal precio-->
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Comprar productos</button>
+                            </div>
+                        </div>
+                    </div>
+        </div>
     
 
     
