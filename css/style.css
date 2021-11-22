@@ -589,6 +589,27 @@ footer div a{
   width: 500px;
 }
 
+/*----seccion crypto*/
+
+.btcContainer img{
+  width: 50px;
+  height: 50px;
+}
+
+.btcContainer span{
+  color: white;
+}
+
+.ethContainer img{
+  margin-left: -11px;
+  width: 70px;
+  height: 70px;
+}
+
+.ethContainer span{
+  color: white;
+}
+
 /*-----------------------------        responsive            --------------------*/
 
 @media (min-width: 780px){
@@ -1158,6 +1179,25 @@ footer div a{
   font-size: 25px;
 }
 
+/*----seccion crypto*/
+
+.btcContainer img{
+  width: 50px;
+  height: 50px;
+}
+
+.btcContainer span{
+  color: white;
+}
+
+.ethContainer img{
+  width: 70px;
+  height: 70px;
+}
+
+.ethContainer span{
+  color: white;
+}
 
 
 }
