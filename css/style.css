@@ -282,9 +282,6 @@ header img{
   justify-content: end;
 }
 
-.grupoCartas{
-  display: none;
-}
 
 
 
@@ -304,7 +301,7 @@ header img{
   margin-top: 30px;
   border: solid black 3px;
   border-radius: 30px;
-  box-shadow: 3px 3px 3px 3px black;
+  box-shadow: 0 0 5px black;
 }
 
 .cuotas h3{
@@ -327,7 +324,7 @@ header img{
   margin-top: 40px;
   border: solid black 3px;
   border-radius: 30px;
-  box-shadow: 3px 3px 3px 3px black;
+  box-shadow: 0 0 5px black;
 }
 
 .envios img{
@@ -502,9 +499,10 @@ footer div a{
 
 .contenedor__cuentaRegresiva h2{
   font-size: 35px;
+  font-weight: 700;
   margin-top: -40px;
   color: black;
-  text-shadow: 0 0 10px rgb(46, 130, 255);
+  text-shadow: 3px 3px rgb(46, 130, 255);
 }
 
 .big-text{
@@ -582,12 +580,6 @@ footer div a{
   display: none;
 }
 
-
-.imgZoom{
-  position: absolute;
-  height: 500px;
-  width: 500px;
-}
 
 /*----seccion crypto*/
 
@@ -899,7 +891,7 @@ footer div a{
   margin-top: 60px;
   border: solid black 3px;
   border-radius: 30px;
-  box-shadow: 3px 3px 3px 3px black;
+  box-shadow: 0 0 5px black;
 }
 
 .cuotas img{
@@ -920,6 +912,10 @@ footer div a{
   color: white;
   
   text-align: center;
+}
+
+.metodoEnvios{
+  box-shadow: 0 0 5px black;
 }
 
 .envios img{
@@ -1107,6 +1103,7 @@ footer div a{
   background-color: white;
   border-radius: 20px;
   border: solid rgb(46, 130, 255);
+  box-shadow: 0 0 6px black;
   display: flex;
   flex-flow: wrap;
   margin-bottom: 20px;

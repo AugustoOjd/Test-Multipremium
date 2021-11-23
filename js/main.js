@@ -5,8 +5,7 @@ const subTotal = document.getElementById("subTotal");
 const totalProductosCarrito = document.getElementById("totalProductos");
 
 
-
-let cart = JSON.parse(localStorage.getItem(null)) || JSON.parse(localStorage.getItem("CART"));
+let cart = JSON.parse(localStorage.getItem("CART")) || [];
 updatecart();
 
 function updatecart(){
@@ -68,6 +67,7 @@ function renderCartItems(){
             <div class="col-md-8">
             <div class="card-body">
                 <h5 class="card-title">${item.nombre}</h5>
+                <h4>$${item.precio}</h4>
                 <div><button type="button" class="btn btn-success" onclick="cambioNumeroUnit('plus', ${item.id})">+</button></div>
                 <div>${item.numeroUnidades}</div>
                 <div><button type="button" class="btn btn-danger" onclick="cambioNumeroUnit('minus', ${item.id})">-</button></div>

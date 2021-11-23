@@ -59,8 +59,12 @@ $(()=>{
                 $("#clasica").append(`
         
                     <div class="remeraEL1">
-                        <img src="${producto.imgSrc}" alt="${producto.nombre}"  class="imgRopa">
-                        <img src="../assest/oferta.jpg" alt="" class="imgRopa2"></img>
+                        
+                            <img src="${producto.imgSrc}" alt="${producto.nombre}"  class="imgRopa">
+                                <div>
+                                    <img src="../assest/oferta.jpg" alt="" class="imgRopa2"></img>
+                                </div>
+                            
                     </div>
                     <div class="remeraEL1__texto">  
                         <h3>${producto.nombre}</h3>
@@ -105,10 +109,15 @@ $(()=>{
         /*---ANIMACION OFERTA ROPA CLASICA*/
         $(".imgRopa2").hide()
 
+        
+
         $(".imgRopa").mouseenter(function(){
+
+            
             $(".imgRopa2").fadeTo("fast", 0.5, function(){
 
                 $(".imgRopa").mouseleave(function(){
+                    
                     $(".imgRopa2").fadeOut(function(){
 
                     })
