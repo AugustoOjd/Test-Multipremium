@@ -1,28 +1,5 @@
 {
     
-    "ropaLimitada":[
-        {
-            "id": 3,
-            "nombre": "Remera limi uno",
-            "precio": 1100,
-            "imgSrc": "../assest/remera-limitada.jpg"
-        },
-        {
-            "id": 4,
-            "nombre": "Remera limi dos",
-            "precio": 850,
-            "imgSrc": "../assest/remera-limitada2.jpg"
-        },
-        {
-            "id": 5,
-            "nombre": "pantalon limi 1",
-            "precio": 1900,
-            "imgSrc": "../assest/pantalon1-edicionlimiada.jpg"
-        }
-    ],
-    
-    
-    
     
     "ropaClasica":[
         {

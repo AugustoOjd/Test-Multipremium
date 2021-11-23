@@ -26,30 +26,6 @@ $(()=>{
 
     const URL_LOCAL = "../products/productos.json"
 
-    // $.get(URL_LOCAL, (response, status)=>{
-    //     if (status === `success`){
-    //         console.log(response)
-    //         response.ropaClasica.forEach(producto => {
-    //             $("#clasica").append(`
-    
-    //             <div class="remeraEL1">
-    //                 <img src="${producto.imgSrc}" alt="${producto.nombre}"  class="imgRopa">
-    //                 <img src="../assest/oferta.jpg" alt="" class="imgRopa2"></img>
-    //             </div>
-    //             <div class="remeraEL1__texto">  
-    //                 <h3>${producto.nombre}</h3>
-    //                 <div>
-    //                     <p>$${producto.precio}</p>
-    //                 </div>
-    //                 <button type="button" class="btn btn-primary addCart">Agregar al carrito</button>
-    //             </div>
-    
-    // `)
-    //         });
-    //     }
-
-    // })
-
     $.ajax({
         dataType: "json",
         url: URL_LOCAL,
@@ -60,7 +36,7 @@ $(()=>{
         
                     <div class="remeraEL1">
                         
-                            <img src="${producto.imgSrc}" alt="${producto.nombre}"  class="imgRopa">
+                            <img src="${producto.imgSrc}" alt="${producto.nombre}" class="imgRopa">
                                 <div>
                                     <img src="../assest/oferta.jpg" alt="" class="imgRopa2"></img>
                                 </div>
@@ -71,11 +47,15 @@ $(()=>{
                         <div>
                             <p>$${producto.precio}</p>
                         </div>
-                        <button type="submit" class="btn btn-primary addCart" value="${producto.id}">Agregar al carrito</button>
+                        
+                            <button type="submit" class="btn btn-primary addCart">Agregar al carrito</button>
+                        
                     </div>
         
         `)
             });
+
+            
         }
 
 
@@ -107,48 +87,69 @@ $(()=>{
         })
 
         /*---ANIMACION OFERTA ROPA CLASICA*/
+        
         $(".imgRopa2").hide()
 
         
-
-        $(".imgRopa").mouseenter(function(){
-
+        
+        $(".imgRopa").mouseenter((e)=>{
             
-            $(".imgRopa2").fadeTo("fast", 0.5, function(){
-
-                $(".imgRopa").mouseleave(function(){
-                    
-                    $(".imgRopa2").fadeOut(function(){
-
-                    })
-                })
-            })
-
-        })
-
-
-        $(".addCart").click(()=>{
-            $("#contCarrito").html((data)=>{
+            let img1 = $(e.target).parent(".remeraEL1").children("img")
+            let img2 = $(e.target).parent(".remeraEL1").children("div").children("img")
+            
+            
+            $(img2).fadeTo("fast", 0.8, ()=>{
                 
-            })
+                $(img1).mouseleave(()=>{
 
+                    $(img2).hide()
+                })
+                
+                
+            })   
 
         })
 
+        
 
+        // let cartItemCont = 0;
+        $(".addCart").click( (e) =>{
+            
+            const img = $(e.target).parent(".remeraEL1").children("img").attr("src")
+            const title = $(e.target).parent(".remeraEL1__texto").children("h3").text()
+            const price = $(e.target).parent(".remeraEL1__texto").children("div").children().text()
+            
 
+            console.log(img)
+            console.log(title)
+            console.log(price)
 
-
-
-
+            let cartItems = `
+                <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    
+                    <div class="col-md-4">
+                    <img src="${img}" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">${title}</h5>
+                        <h4>${price}</h4>
+                    </div>
+                    
+                    </div>
+                </div>
+                </div>
+            `
+            
+            $("#contCarrito").append(cartItems)
+        })
 
 
     })
 
-    
-
-
 
 
 })
+
 
