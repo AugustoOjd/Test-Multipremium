@@ -428,9 +428,10 @@ header img{
 /*------------Seccion footer------------*/
 
 footer{
-  background-color: rgb(46, 130, 255);
-  border: solid 5px rgb(46,130, 255);
-  border-radius: 20px
+  background-color: rgb(0, 0, 0);
+  border: solid 1px rgb(46,130, 255);
+  border-radius: 20px;
+  padding: 5px;
 }
 
 footer div{
@@ -604,6 +605,14 @@ footer div a{
   font-size: 20px;
 }
 
+.carita{
+  
+  width: 120px;
+  height: 120px;
+}
+
+
+
 /*-----------------------------        responsive            --------------------*/
 
 @media (min-width: 780px){
@@ -633,6 +642,8 @@ footer div a{
   .logoMenu{
     font-size: 100px;
   }
+
+
 
   .contenedor {
     width: 100%;
@@ -1028,12 +1039,14 @@ footer div a{
 /*--- contenedor footer*/
 
   .contenedor footer {
+    background-color: black;
     grid-area: footer;
     width: 100%;
     height: 200px;
   }
 
   .contenedor__footer{
+    
     font-size: 80px;
     display: flex;
     justify-content: space-around;
@@ -1200,8 +1213,24 @@ footer div a{
   font-size: 17px;
 }
 
+.btnUp{
+  border: none;
+  background-color: rgb(46, 130, 255, 0.3);
+  font-size: 50px;
+  border-radius: 50px;
+}
+
+.btnValoracion{
+  border: none;
+  background-color: rgb(46, 130, 255, 0.4);
+  font-weight: 700;
+  font-size: 70px;
+}
+
 
 }
+
+
 
 
 

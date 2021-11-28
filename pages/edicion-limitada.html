@@ -162,10 +162,61 @@
             
             <footer>
                 <div class="contenedor__footer">
-                    <a href="#"> Contacto</a>
-                    <a href="#"> Ayuda</a>
-                    <a href="#"> Nosotros</a>
+                    <button class="btn btn-primary btnValoracion"> Contacto </button>
+                    <button class="btn btn-primary btnValoracion"> Ayuda</button>
+                    
+                    <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary btnValoracion" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Valoración
+                </button>
+                
+                <!-- Modal -->
+                <div class="modal fade contEncuesta" id="staticBackdrop" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h3 class="modal-title" id="question">Encuesta</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                                <div class="form-check form-check-inline" >
+                                    <input class="form-check-input asnwer" type="radio" name="asnwer" id="inlineRadio1" value="1">
+                                    <label class="form-check-label" for="a" id="a_text">question</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input asnwer" type="radio" name="asnwer" id="inlineRadio2" value="2">
+                                    <label class="form-check-label" for="b" id="b_text">question</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input asnwer" type="radio" name="asnwer" id="inlineRadio3" value="3">
+                                    <label class="form-check-label" for="c" id="c_text">question</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input asnwer" type="radio" name="asnwer" id="inlineRadio4" value="4">
+                                    <label class="form-check-label" for="d" id="d_text">question</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input asnwer" type="radio" name="asnwer" id="inlineRadio5" value="5">
+                                    <label class="form-check-label" for="e" id="e_text">question</label>
+                                </div>
+                            
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" id="submitBtn" class="btn btn-primary">Next</button>
+                        
+                        </div>
+                        
+                    </div>
+                    </div> 
                 </div>
+                    
+                    
+                    
+                
+                
+                
+                <button class="btn btn-primary btnUp" onclick="upPage()">Up</button>
+            
             </footer>
 
         <div class="carrito">
