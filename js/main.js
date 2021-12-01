@@ -153,7 +153,7 @@ $(()=>{
 
     $.get(URLBTC, (response, status)=>{
         if (status === `success`){
-            console.log(response.data)
+            
             $(".btcPrecio").append(`$USD ${response.data.amount}`)
         }
     })
@@ -162,7 +162,7 @@ $(()=>{
 
     $.get(URLETH, (response, status)=>{
         if (status === `success`){
-            console.log(response.data)
+            
             $(".ethPrecio").append(`$USD ${response.data.amount}`)
         }
     })

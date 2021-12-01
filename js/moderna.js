@@ -234,6 +234,162 @@ submitBtn.addEventListener("click", (e)=>{
 
 console.log(resultado)
 
+/*Seleccion de pokemon*/
+
+
+const bulbaCont = document.getElementById("bulbaCont")
+const charmCont = document.getElementById("charmCont")
+const squirCont = document.getElementById("squirCont")
+
+const bulbasaur = []
+const charmander = []
+const squirtle = []
+
+renderBulba();
+renderCharm();
+renderSqui();
+
+function renderBulba(){
+    fetch("https://pokeapi.co/api/v2/pokemon/1")
+    .then((res)=>res.json())
+    .then((data)=>{
+        console.log(`${data.name}`)
+        // console.log(data.sprites.front_default)
+        // console.log(`hp: ${data.stats[0].base_stat}`)
+        // console.log(`ataque: ${data.stats[1].base_stat}`)
+        // console.log(`defensa: ${data.stats[2].base_stat}`)
+
+        bulbasaur.push(
+            {nombre: `${data.name}`,
+            hp:`${data.stats[0].base_stat}`,
+            ataque:`${data.stats[1].base_stat}`,
+            defensa:`${data.stats[2].base_stat}`,
+            imgSrc:`${data.sprites.front_default}`})
+        console.log(bulbasaur)
+
+
+        bulbasaur.forEach(element => {
+            bulbaCont.innerHTML = `
+            <div class="card h-100">
+                <img src="${element.imgSrc}" class="card-img-top" alt="${element.nombre}">
+                    <div class="card-body cardCont">
+                        <h5 class="card-title">${element.nombre}:</h5>
+                        <ul class="listStats">
+                            <li>
+                                Hp: ${element.hp}
+                            </li>
+                            <li>
+                                Ataque: ${element.ataque}
+                            </li>
+                            <li>
+                            Defensa: ${element.defensa}
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                    <a href="moderna.html"><button class="btn btn-primary" type="button">Button</button></a>
+                    </div>
+                </div>
+            </div>
+            `
+        });
+
+    })
+
+    
+}
+
+function renderCharm(){
+    fetch("https://pokeapi.co/api/v2/pokemon/4")
+    .then((res)=>res.json())
+    .then((data)=>{
+        console.log(`nombre: ${data.name}`)
+        // console.log(`hp: ${data.stats[0].base_stat}`)
+        // console.log(`ataque: ${data.stats[1].base_stat}`)
+        // console.log(`defensa: ${data.stats[2].base_stat}`)
+
+        charmander.push({nombre: `${data.name}`,
+        hp:`${data.stats[0].base_stat}`,
+        ataque:`${data.stats[1].base_stat}`,
+        defensa:`${data.stats[2].base_stat}`,
+        imgSrc:`${data.sprites.front_default}`})
+        console.log(charmander)
+
+        charmander.forEach(element => {
+            charmCont.innerHTML = `
+            <div class="card h-100">
+                <img src="${element.imgSrc}" class="card-img-top" alt="${element.nombre}">
+                    <div class="card-body cardCont">
+                        <h5 class="card-title">${element.nombre}:</h5>
+                        <ul class="listStats">
+                            <li>
+                                Hp: ${element.hp}
+                            </li>
+                            <li>
+                                Ataque: ${element.ataque}
+                            </li>
+                            <li>
+                            Defensa: ${element.defensa}
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                    <a href="edicion-limitada.html"><button class="btn btn-primary" type="button">Button</button></a>
+                    </div>
+                </div>
+            </div>
+            `
+        });
+    })
+
+
+}
+
+
+function renderSqui(){
+    fetch("https://pokeapi.co/api/v2/pokemon/7")
+    .then((res)=>res.json())
+    .then((data)=>{
+        console.log(`nombre: ${data.name}`)
+        // console.log(`hp: ${data.stats[0].base_stat}`)
+        // console.log(`ataque: ${data.stats[1].base_stat}`)
+        // console.log(`defensa: ${data.stats[2].base_stat}`)
+
+        squirtle.push({nombre: `${data.name}`,
+        hp:`${data.stats[0].base_stat}`,
+        ataque:`${data.stats[1].base_stat}`,
+        defensa:`${data.stats[2].base_stat}`,
+        imgSrc:`${data.sprites.front_default}`})
+        console.log(squirtle)
+
+        squirtle.forEach(element => {
+            squirCont.innerHTML = `
+            <div class="card h-100">
+                <img src="${element.imgSrc}" class="card-img-top" alt="${element.nombre}">
+                    <div class="card-body cardCont">
+                        <h5 class="card-title">${element.nombre}:</h5>
+                        <ul class="listStats">
+                            <li>
+                                Hp: ${element.hp}
+                            </li>
+                            <li>
+                                Ataque: ${element.ataque}
+                            </li>
+                            <li>
+                            Defensa: ${element.defensa}
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                    <a href="clasica.html"><button class="btn btn-primary" type="button">Button</button></a>
+                    </div>
+                </div>
+            </div>
+            `
+        });
+    })
+}
+
 
 
 

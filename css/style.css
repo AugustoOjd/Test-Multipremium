@@ -611,6 +611,19 @@ footer div a{
   height: 120px;
 }
 
+.cardCont{
+  display: flex;
+  flex-flow: column;
+}
+
+
+.listStats{
+  margin-left: -30px;
+  font-size: 25px;
+  list-style: none;
+}
+
+
 
 
 /*-----------------------------        responsive            --------------------*/

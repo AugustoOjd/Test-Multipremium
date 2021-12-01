@@ -151,7 +151,38 @@
             <footer>
                 <div class="contenedor__footer">
                     <button class="btn btn-primary btnValoracion"> Contacto </button>
-                    <button class="btn btn-primary btnValoracion"> Ayuda</button>
+                    <!-- Button trigger modal Seleccion -->
+                <button type="button" class="btn btn-primary btnValoracion" data-bs-toggle="modal" data-bs-target="#Selecion"> Selecciona</button>
+                
+                <div class="modal fade" id="Selecion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Seleciona tu inicial</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                        <div class="modal-body">
+                                            <!--div de cards-->
+                                            <div class="row row-cols-1 row-cols-md-3 g-4">
+                                                <div class="col" id="bulbaCont">
+                                                        <!--Contender bulbasaur-->
+                                                </div>
+
+                                                <div class="col" id="charmCont">
+                                                        <!--Contender charmander-->
+                                                </div>
+
+                                                <div class="col" id="squirCont">
+                                                        <!--Contender squirtle-->
+                                                </div>
+                                                
+                                                </div>
+                                        </div>
+                                <div class="modal-footer">
+                            </div>
+                        </div>
+                    </div>
+                </div>
                     
                     <!-- Button trigger modal -->
                 <button type="button" class="btn btn-primary btnValoracion" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
