@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Pagar</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark tamañoMenu">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../assest/premium-logo.png" alt="" width="40" height="34" class="d-inline-block align-text-top logoP">
+                PREMIUM
+            </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="edicion-limitada.html">Edicion Limitada</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="moderna.html">Moderna</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="clasica.html">Clasica</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ingreso.html">Ingresar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="registo.html">Registrarse</a>
+                </li>
+                <li>
+                    <div class="btcContainer">
+                        <img src="../assest/logo-btc.png.crdownload" alt="btc">
+                        <span class="btcPrecio">
+                            
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="ethContainer">
+                        <img src="../assest/logo-eth-pequeño.png" alt="eth">
+                        <span class="ethPrecio">
+                            
+                        </span>
+                    </div>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+
+    <div class="carrito">
+
+        <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="totalProductos" ></span>
+                        <img src="../assest/carritox2.png" alt="carrito de compras" class="carrito--img">
+                </button>
+    
+    </div>
+        <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Carrito de compras</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" id="contCarrito">
+                            
+                            <!--Render de productos en carrito-->
+                        </div>
+                        <div id="subTotal">
+
+                            <!--Render subtotal precio-->
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Comprar productos</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+
+
+
+</div>
+
+                
+        <div class="contRenderImg" id="renderContImg">
+                
+                
+            
+                
+            
+            
+                <div class="boxContImgFront">
+                    <img src="../assest/chip.png" alt="chip" class="imgChip">
+                    <img src="../assest/visa-logo.png" alt="visa" class="imgVisa" id="visaLogo">
+                    <img src="../assest/mastercard-logo.png" alt="mastercar" class="imgMaster" id="masterLogo">
+                        <div class="numeroCard">
+                            <h3>Numero de Tarjeta</h3>
+                            <p>###########################</p>
+                        </div>
+                        <div class="datosCard">
+                            <div class="datosCardNombre">
+                                <h3>Nombre y apellido</h3>
+                                    <p>#########</p>
+                            </div>
+                            <div class="datosCardFecha">
+                                <h3>Vencimiento</h3>
+                                    <div>
+                                        <p>Mes  /</p>
+                                        <p>Año</p>
+                                    </div>
+                            </div>
+                        </div>
+                </div>
+
+                <div class="boxContImgBack">
+                    <div class="barraNegra"></div>
+                        <div class="ccvBack">
+                            <p>CCV:</p>
+                            <p>###</p>
+                        </div>
+                    <img src="../assest/visa-logo.png" alt="visa" class="imgVisa">
+                </div> 
+
+                <div class="btcPago">
+                    <img src="../assest/logo-btc.png.crdownload" alt="BTC">
+                </div>
+                <div class="ethPago">
+                    <img src="../assest/logo-eth.png" alt="eth">
+                </div>
+                
+
+        </div>
+        
+        
+        <div class="boxContDatos">
+            <div class="btnsCont">
+                <button type="button" class="btn btn-primary" id="btnCCard">Credit Card</button>
+                <button type="button" class="btn btn-primary" id="btnBtc">BTC</button>
+                <button type="button" class="btn btn-primary" id="btnEth">ETH</button>
+            </div>
+
+
+            <div class="qrBtc">
+                <img src="../assest/QR-pago.png" alt="qrBtc">
+                <div class="input-group mb-3 precioTotalCard" id="precioBtc"> 
+                    <!-- <span class="input-group-text">$</span>
+                    <span class="input-group-text" ></span> -->
+                </div>
+            </div>
+
+            <div class="qrEth">
+                <img src="../assest/QR-pago.png" alt="qrEth">
+                <div class="input-group mb-3" id="precioEth"> 
+                    <!-- <span class="input-group-text">$</span>
+                    <span class="input-group-text" ></span> -->
+                </div>
+            </div>
+
+                <div class="renderPagos" id="renderDataPagos">
+                    
+                
+                    <div class="cardContDatos">
+                        <form class="row g-3" id="formCard">
+                            <label for="inputEmail4" class="form-label" >Numero de Tarjeta</label>
+                            <div class="col-md-10">
+                                <input type="number" class="form-control" id="valNroCard" placeholder="Numero de Tarjeta">
+                                <div id="errorNro">
+                                    
+                                </div>
+                            </div>
+                            <div class="col-11">
+                                <label for="text" class="form-label">Nombre y Apellido</label>
+                                <input type="text" class="form-control" id="valNomCard" placeholder="Nombre y apellido">
+                                <div id="errorNom">
+                                    
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <label for="inputState" class="form-label">Mes</label>
+                                <select id="inputState" class="form-select">
+                                    <option selected>...</option>
+                                    <option>Enero</option>
+                                    <option>Febrero</option>
+                                    <option>Marzo</option>
+                                    <option>Abril</option>
+                                    <option>Mayo</option>
+                                    <option>Junio</option>
+                                    <option>Julio</option>
+                                    <option>Agosto</option>
+                                    <option>Septiembre</option>
+                                    <option>Octubre</option>
+                                    <option>Noviembre</option>
+                                    <option>Diciembre</option>
+                                </select>
+                                
+                            </div>
+                            <div class="col-2">
+                                <label for="inputState" class="form-label">Año</label>
+                                <select id="inputState" class="form-select">
+                                    <option selected>...</option>
+                                    <option>2022</option>
+                                    <option>2023</option>
+                                    <option>2024</option>
+                                    <option>2025</option>
+                                    <option>2026</option>
+                                </select>
+                            </div>
+                            <div class="col-3">
+                                <label for="number" class="form-label">CCV</label>
+                                <input type="number" class="form-control" id="valCcv" placeholder="CCV">
+                                <div id="errorCcv">
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputCity" class="form-label">Ciudad</label>
+                                <input type="text" class="form-control" id="inputCity" placeholder="Ciudad">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="inputState" class="form-label">Provincia</label>
+                                <select id="inputState" class="form-select">
+                                    <option selected>...</option>
+                                    <option value="">Buenos Aires</option>
+                                    <option value="">Capital Federal</option>
+                                    <option value="">Catamarca</option>
+                                    <option value="">Chaco</option>
+                                    <option value="">Chubut</option>
+                                    <option value="">Córdoba</option>
+                                    <option value="">Corrientes</option>
+                                    <option value="">Entre Ríos</option>
+                                    <option value="">Formosa</option>
+                                    <option value="">Jujuy</option>
+                                    <option value="">La Pampa</option>
+                                    <option value="">La Rioja</option>
+                                    <option value="">Mendoza</option>
+                                    <option value="">Misiones</option>
+                                    <option value="">Neuquén</option>
+                                    <option value="">Río Negro</option>
+                                    <option value="">Salta</option>
+                                    <option value="">San Juan</option>
+                                    <option value="">San Luis</option>
+                                    <option value="">Santa Cruz</option>
+                                    <option value="">Santa Fe</option>
+                                    <option value="">Santiago del Estero</option>
+                                    <option value="">Tierra del Fuego</option>
+                                    <option value="">Tucuman</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2">
+                                <label for="inputZip" class="form-label">Zip</label>
+                                <input type="text" class="form-control" id="inputZip">
+                            </div>
+                            <div class="input-group mb-3 precioTotalCard" id="precioTotalCard"> 
+                                <!-- <span class="input-group-text">$</span>
+                                <span class="input-group-text" ></span> -->
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary" id="btnSub">Comprar</button>
+                            </div>
+                        </form>
+                    </div>
+                
+                
+                
+                </div>
+
+
+        </div>
+
+
+        
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../js/pagos.js"></script>
+</body>
+</html>

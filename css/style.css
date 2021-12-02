@@ -623,6 +623,13 @@ footer div a{
   list-style: none;
 }
 
+.boxCont{
+  margin: 25% 25% 25% 25%;
+  width: 80%;
+  background-color: white;
+  color: black;
+}
+
 
 
 
@@ -1238,6 +1245,198 @@ footer div a{
   background-color: rgb(46, 130, 255, 0.4);
   font-weight: 700;
   font-size: 70px;
+}
+
+
+
+
+
+
+
+
+.btcPago img{
+  margin: 5% 25% 1% 32%;
+  width: 600px;
+  height: 400px;
+}
+
+.ethPago img{
+  margin: 5% 25% 1% 32%;
+  width: 600px;
+  height: 400px;
+}
+
+.boxContImgBack{
+  margin: 5% 25% 1% 32%;
+  height: 400px;
+  width: 35%;
+  background-color: #0cbaba;
+  background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);;
+  border-radius: 15px;
+}
+
+.boxContImgBack .imgVisa{
+  width: 70px;
+  height: 60px;
+  margin: 280px 30px 0 550px;
+}
+
+.boxContImgBack .barraNegra{
+  position: absolute;
+  background-color: rgb(36, 36, 36);
+  margin-top: 50px;
+  height: 65px;
+  width: 35%;
+}
+
+.ccvBack{
+  position: absolute;
+  display: flex;
+  margin-left: 18%;
+  margin-top: 8%;
+  color: white;
+  font-size: 40px;
+}
+
+.ccvBack p{
+  margin-left: 20px;
+}
+
+
+
+
+
+.boxContImgFront{
+  margin: 5% 25% 1% 32%;
+  height: 400px;
+  width: 35%;
+  background-color: #0cbaba;
+  background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);;
+  border-radius: 15px;
+}
+
+.imgChip{
+  width: 70px;
+  height: 60px;
+  margin: 30px 0 0 30px;
+}
+
+.imgVisa{
+  width: 70px;
+  height: 60px;
+  margin: 30px 30px 0 450px;
+}
+
+.imgMaster{
+  display: none;
+  width: 70px;
+  height: 60px;
+  margin: 30px 30px 0 450px;
+}
+
+.numeroCard{
+  font-size: 30px;
+  color: white;
+  margin: 35px 0 0 30px;
+}
+
+.datosCard{
+  font-size: 30px;
+  display: flex;
+  color: white;
+  margin: 35px 0 0 30px;
+}
+
+.datosCardFecha{
+  margin-left: 150px;
+}
+
+.datosCardFecha div{
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
+
+
+
+.boxContDatos{
+  display: flex;
+  margin: 1% 25% 20% 15%;
+  width: 70%;
+  height: 720px;
+  background-color: #537895;
+  background-image: linear-gradient(315deg, #537895 0%, #09203f 74%);
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0 0 0px;
+  border: none;
+}
+
+
+
+.cardContDatos{
+  font-size: 30px;
+  padding: 5px;
+  margin: 5px;
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.btnsCont{
+  font-size: 40px;
+  display: flex;
+  flex-flow: column;
+  
+}
+
+.btnsCont button{
+  font-size: 20px;
+  font-weight: 700;
+  border: solid rgb(0, 0, 0) 1px;
+  border-radius: 5px 0px 0px 5px;
+  background-color: #485461;
+  background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+  height: 33.333%;
+  width: 150px;
+}
+
+.qrBtc{
+  background-color: white;
+  border-radius: 5px;
+  width: 500px;
+  height: 500px;
+  margin-left: 20%;
+  margin-top: 10%;
+  
+}
+
+.qrBtc img{
+  width: 400px;
+  height: 400px;
+  margin-left: 10%;
+  margin-top: 6%;
+  
+}
+
+.qrEth{
+  background-color: white;
+  border-radius: 5px;
+  width: 500px;
+  height: 500px;
+  margin-left: 20%;
+  margin-top: 10%;
+  
+}
+
+.qrEth img{
+  width: 400px;
+  height: 400px;
+  margin-left: 10%;
+  margin-top: 6%;
+  
 }
 
 
