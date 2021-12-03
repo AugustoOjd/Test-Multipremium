@@ -257,7 +257,7 @@ function renderBulba(){
                         </ul>
                     </div>
                     <div class="card-footer">
-                    <a href="moderna.html"><button class="btn btn-primary" type="button">Button</button></a>
+                    <a href="moderna.html"><button class="btn btn-primary" type="button">Seleccionar</button></a>
                     </div>
                 </div>
             </div>
@@ -304,7 +304,7 @@ function renderCharm(){
                         </ul>
                     </div>
                     <div class="card-footer">
-                    <a href="edicion-limitada.html"><button class="btn btn-primary" type="button">Button</button></a>
+                    <a href="edicion-limitada.html"><button class="btn btn-primary" type="button">Seleccionar</button></a>
                     </div>
                 </div>
             </div>
@@ -351,7 +351,7 @@ function renderSqui(){
                         </ul>
                     </div>
                     <div class="card-footer">
-                    <a href="clasica.html"><button class="btn btn-primary" type="button">Button</button></a>
+                    <a href="clasica.html"><button class="btn btn-primary" type="button">Seleccionar</button></a>
                     </div>
                 </div>
             </div>
@@ -359,3 +359,33 @@ function renderSqui(){
         });
     })
 }
+
+
+/*form contacto*/
+
+const formCt = document.getElementById("formContacto")
+const emailCt = document.getElementById("recipient-name")
+const textCt = document.getElementById("message-text")
+const btnContacto = document.getElementById("btnContacto")
+
+btnContacto.addEventListener("click", (e)=>{
+    let mensaje = []
+    let regexEmail =/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
+
+    if((textCt.value.length < 5 || textCt.value.length >= 50) && ( textCt.value === "" || textCt.value == null)){
+        alert("Texto invalido")
+        mensaje.push("error")
+    }
+    if(!regexEmail.test(emailCt.value)){
+        alert("Email incorrecto")
+        mensaje.push("error")
+    }
+    if(mensaje.length > 0){
+        e.preventDefault()
+    }else{
+        alert("Formulario enviado correctamente")
+    }
+    
+    
+    
+})

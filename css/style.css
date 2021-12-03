@@ -633,6 +633,200 @@ footer div a{
 
 
 
+
+
+.btcPago img{
+  margin: 5% 25% 1% 32%;
+  width: 200px;
+  height: 200px;
+}
+
+.ethPago img{
+  margin: 5% 25% 1% 32%;
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+
+
+.boxContImgBack{
+  margin: 5% 25% 1% 5%;
+  height: 300px;
+  width: 90%;
+  background-color: #0cbaba;
+  background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);;
+  border-radius: 15px;
+}
+
+.boxContImgBack .imgVisa{
+  width: 70px;
+  height: 60px;
+  margin: 35% 0 0 55%;
+}
+
+.boxContImgBack .barraNegra{
+  position: absolute;
+  background-color: rgb(36, 36, 36);
+  margin-top: 70px;
+  height: 60px;
+  width: 90%;
+}
+
+.ccvBack{
+  position: absolute;
+  display: flex;
+  margin-left: 40%;
+  margin-top: 30%;
+  color: white;
+  font-size: 30px;
+}
+
+.ccvBack p{
+  margin-left: 20px;
+}
+
+
+
+
+
+.boxContImgFront{
+  margin: 22% 5% 1% 5%;
+  height: 300px;
+  width: 90%;
+  background-color: #0cbaba;
+  background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);;
+  border-radius: 15px;
+}
+
+.imgChip{
+  width: 40px;
+  height: 30px;
+  margin: 30px 0 0 30px;
+}
+
+.imgVisa{
+  width: 40px;
+  height: 30px;
+  margin: 30px 30px 0 60%;
+}
+
+.imgMaster{
+  display: none;
+  width: 70px;
+  height: 60px;
+  margin: 30px 30px 0 450px;
+}
+
+.numeroCard{
+  font-size: 10px;
+  color: white;
+  margin: 35px 0 0 30px;
+}
+
+.datosCard{
+  font-size: 10px;
+  display: flex;
+  color: white;
+  margin: 0px 0 0 30px;
+}
+
+.datosCardFecha{
+  margin-left: 10px;
+}
+
+.datosCardFecha div{
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
+
+
+
+.boxContDatos{
+  display: flex;
+  margin: 5% 5% 5% 5%;
+  width: 90%;
+  height: 700px;
+  background-color: #537895;
+  background-image: linear-gradient(315deg, #537895 0%, #09203f 74%);
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0 0 0px;
+  border: none;
+}
+
+
+
+.cardContDatos{
+  font-size: 8px;
+  padding: 5px;
+  margin: 5px;
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.btnsCont{
+  font-size: 10px;
+  display: flex;
+  flex-flow: column;
+  
+}
+
+.btnsCont button{
+  font-size: 10px;
+  font-weight: 700;
+  border: solid rgb(0, 0, 0) 1px;
+  border-radius: 5px 0px 0px 5px;
+  background-color: #485461;
+  background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+  height: 33.333%;
+  width: 60px;
+}
+
+.qrBtc{
+  background-color: white;
+  border-radius: 5px;
+  width: 220px;
+  height: 220px;
+  margin-left: 15%;
+  margin-top: 40%;
+  
+}
+
+.qrBtc img{
+  width: 220px;
+  height: 220px;
+  margin-left: 1%;
+  margin-top: 0;
+  
+}
+
+.qrEth{
+  background-color: white;
+  border-radius: 5px;
+  width: 220px;
+  height: 220px;
+  margin-left: 15%;
+  margin-top: 40%;
+  
+}
+
+.qrEth img{
+  width: 220px;
+  height: 220px;
+  margin-left: 1%;
+  margin-top: 0%;
+  
+}
+
+
+
+
 /*-----------------------------        responsive            --------------------*/
 
 @media (min-width: 780px){
